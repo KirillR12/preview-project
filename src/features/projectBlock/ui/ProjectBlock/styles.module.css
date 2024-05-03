@@ -1,0 +1,17 @@
+.ProjectBlock {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    
+    &:hover {
+
+        .hashtag {
+            color: rgba(117, 69, 195, 1)
+        }
+    }
+}
+
+.hashtag {
+    transition: all 0.2s;
+    color: #fff;
+}

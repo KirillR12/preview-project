@@ -1,0 +1,22 @@
+.Button {
+    padding: 10px 15px;
+
+    color: var(--primary-color);
+
+    cursor: pointer;
+
+    
+    &:hover {
+        transition: all 0.2s;
+        color: rgb(154, 92, 255)
+    }
+}
+
+.clear,
+.clear_inverted {
+    padding: 10px 0;
+    border: none;
+
+    background: none;
+    outline: none;
+}

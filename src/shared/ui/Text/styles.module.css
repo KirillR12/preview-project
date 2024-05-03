@@ -1,0 +1,40 @@
+.textSmall {
+font-size: 16px;
+}
+
+.textMedium {
+font-size: 32px;
+}
+
+.textBig {
+font-size: 36px;
+}
+
+.ligth {
+font-weight: 300;
+}
+
+.medium {
+font-weight: 500;
+}
+
+.bolt  {
+font-weight: 700;
+}
+
+h1 {
+font-size: 72px;
+}
+    
+h2 {
+font-size: 48px;
+}
+
+h3 {
+font-size: 36px;
+}
+
+h4 {
+font-size: 24px;
+}
+

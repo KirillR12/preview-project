@@ -1,0 +1,21 @@
+.SteckBlock {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0 15px 0px;
+    background: rgba(244, 244, 244, 1);
+    padding: 48px 230px 98px 230px;
+    position: relative;
+    z-index: 999;
+
+    &:hover {
+        .hashtag {
+            color: rgba(117, 69, 195, 1);
+            user-select: none; 
+        }
+    }
+}
+
+
+.hashtag {
+    transition: all 0.2s;
+    color: rgba(244, 244, 244, 1);
+    user-select: none; 
+}

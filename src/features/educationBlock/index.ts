@@ -1,0 +1,1 @@
+export { EducationBlock } from "./ui/EducationBlock/EducationBlock";

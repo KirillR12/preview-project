@@ -1,0 +1,7 @@
+.ContactBlock {
+    padding: 48px 230px; 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0 15px 0px;
+    background: rgba(244, 244, 244, 1);
+    position: relative;
+    z-index: 999;
+}

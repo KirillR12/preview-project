@@ -1,0 +1,14 @@
+.ProjectCard {
+    position: relative;
+    z-index: 999;
+    padding: 50px;
+}
+
+.img {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0 40px 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 780px;
+    height: 370px;
+}

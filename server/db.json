@@ -1,0 +1,100 @@
+{
+    "project": [
+        {
+            "img": "",
+            "description": 
+            [
+                "Базовый проект для знакомства с библиотекой React.",
+                "Познакомился с реактивностью, context, virtual dom react, jsx, create-react-app.",
+                "Работа с готовыми UI элементами из библиотеки bootstrap."
+            ],
+            "gitLink": "https://github.com/KirillR12/todo-list",
+            "name": "Список задач"
+        },
+        {
+            "img": "",
+            "description": 
+            [
+                "В проекте реализован интернет магазин еды для собак.", 
+                "Реализовано роутинг, авторизации, добавление товара в корзину, работа с REST API.", 
+                "Работа со state manager."
+            ],
+            "gitLink": "https://github.com/KirillR12/online-dog-food-store",
+            "name": "Интернет магазин еды для собак"
+        },
+        {
+            "img": "",
+            "description": 
+            [
+                ""
+            ],
+            "gitLink": "",
+            "name": ""
+        },
+        {
+            "img": "",
+            "description": 
+            [
+                ""
+            ],
+            "gitLink": "",
+            "name": ""
+        },
+        {
+            "img": "",
+            "description": 
+            [
+                ""
+            ],
+            "gitLink": "",
+            "name": ""
+        },
+        {
+            "img": "",
+            "description": 
+            [
+                ""
+            ],
+            "gitLink": "",
+            "name": ""
+        }
+    ],
+    "education": [
+{
+    "img": "",
+    "link": ""
+},
+{
+    "img": "",
+    "link": ""
+},
+{
+    "img": "",
+    "link": ""
+},
+{
+    "img": "",
+    "link": ""
+},
+{
+    "img": "",
+    "link": ""
+},
+{
+    "img": "",
+    "link": ""
+}
+    ],
+    "steck": [
+        {
+"description": [],
+"name": ""
+        }
+    ],
+    "contacts": [
+        {
+            "name": "",
+            "link": ""
+        }
+    ]
+}

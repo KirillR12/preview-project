@@ -1,0 +1,1 @@
+export { SteckCard } from "./ui/SteckCard/SteckCard";
