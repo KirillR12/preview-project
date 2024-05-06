@@ -1,1 +1,1 @@
-export { EducationBlock } from "./ui/EducationBlock/EducationBlock";
+export { EducationBlock } from './ui/EducationBlock/EducationBlock'

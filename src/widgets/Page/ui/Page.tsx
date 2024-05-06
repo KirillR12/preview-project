@@ -11,9 +11,7 @@ export const Page = memo((props: PageProps) => {
     const { className, children } = props
 
     return (
-        <main
-            className={classNames(styles.Page, {}, [className])}
-        >
+        <main className={classNames(styles.Page, {}, [className])}>
             {children}
         </main>
     )

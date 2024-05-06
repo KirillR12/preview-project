@@ -1,1 +1,1 @@
-export { ProjectBlock } from "./ui/ProjectBlock/ProjectBlock";
+export { ProjectBlock } from './ui/ProjectBlock/ProjectBlock'

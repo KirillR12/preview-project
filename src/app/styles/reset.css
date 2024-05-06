@@ -5,5 +5,18 @@
 }
 
 a {
+    color: #000;
     text-decoration: none;
+}
+
+p {
+    font-family: 'Ubuntu';
+}
+
+h3 {
+    font-family: 'Ubuntu';
+}
+
+h4 {
+    font-family: 'Ubuntu';
 }

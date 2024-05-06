@@ -19,6 +19,11 @@
   height: 100%;
 }
 
+.swiper-slide a {
+  padding: none;
+  height: 100%;
+}
+
 .swiper-slide {
   width: auto;
 }

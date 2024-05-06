@@ -1,17 +1,24 @@
 .ProjectBlock {
     position: relative;
-    width: 100%;
+    max-width: 1300px;
     overflow: hidden;
+    width: 100%;
+
+    @media (max-width: 1300px ) {
+        width: 700px;
+    }
     
     &:hover {
 
         .hashtag {
-            color: rgba(117, 69, 195, 1)
+            color: rgba(117, 69, 195, 1);
+            user-select: none; 
         }
     }
 }
 
 .hashtag {
     transition: all 0.2s;
-    color: #fff;
+    color: transparent;
+    user-select: none; 
 }

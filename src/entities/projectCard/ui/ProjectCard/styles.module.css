@@ -11,4 +11,9 @@
     object-fit: cover;
     width: 780px;
     height: 370px;
+
+    @media (max-width: 1300px ) {
+        width: 520px;
+        height: 245px;
+    }
 }

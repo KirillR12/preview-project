@@ -2,14 +2,14 @@ import classNames from 'classnames'
 import { memo } from 'react'
 import styles from './styles.module.css'
 
- interface HrProps {
-   className?: string
-   width?: string
-   height?: string
-   max?: boolean
-   hrVertically?: boolean
-   inverted?: boolean
-   maxInverted?: boolean
+interface HrProps {
+    className?: string
+    width?: string
+    height?: string
+    max?: boolean
+    hrVertically?: boolean
+    inverted?: boolean
+    maxInverted?: boolean
 }
 
 export const Hr = memo((props: HrProps) => {
@@ -31,11 +31,17 @@ export const Hr = memo((props: HrProps) => {
 
     if (hrVertically) {
         return (
-            <hr style={{ height: `${height}` }} className={classNames(styles.hrVertically, mods, [className])} />
+            <hr
+                style={{ height: `${height}` }}
+                className={classNames(styles.hrVertically, mods, [className])}
+            />
         )
     }
 
     return (
-        <hr style={{ width: `${width}` }} className={classNames(styles.Hr, mods, [className])} />
+        <hr
+            style={{ width: `${width}` }}
+            className={classNames(styles.Hr, mods, [className])}
+        />
     )
 })

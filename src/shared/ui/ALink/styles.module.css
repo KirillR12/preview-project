@@ -1,0 +1,15 @@
+.a {
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+    &:hover {
+        transition: all 0.2s;
+        color: rgb(154, 92, 255)
+    }
+}
+
+.clear {
+    padding: 0;
+}
+

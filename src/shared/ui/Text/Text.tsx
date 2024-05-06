@@ -2,17 +2,11 @@ import { memo } from 'react'
 import styles from './styles.module.css'
 import classNames from 'classnames'
 
-export enum TitleTag {
-    H1 = 'size_h1',
-    H2 = 'size_h2',
-    H3 = 'size_h3',
-    H4 = 'size_h4',
-}
-
+type TitleTag = 'h1' | 'h2' | 'h3' | 'h4'
 type SizeTextType = 'textBig' | 'textMedium' | 'textSmall'
 type WeightType = 'ligth' | 'medium' | 'bolt'
 type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4'
-
+type TextAlign = 'start' | 'center' | 'end'
 
 interface TextProps {
     className?: string
@@ -21,14 +15,15 @@ interface TextProps {
     weight?: WeightType
     SizeTextType?: SizeTextType
     tag?: TitleTag
+    aling?: TextAlign
     'data-testid'?: string
 }
 
 const mapSizeToHeaderTag: Record<TitleTag, HeaderTagType> = {
-    [TitleTag.H4]: 'h4',
-    [TitleTag.H3]: 'h3',
-    [TitleTag.H2]: 'h2',
-    [TitleTag.H1]: 'h1',
+    h4: 'h4',
+    h3: 'h3',
+    h2: 'h2',
+    h1: 'h1',
 }
 
 export const Text = memo((props: TextProps) => {
@@ -38,26 +33,30 @@ export const Text = memo((props: TextProps) => {
         text,
         weight = 'ligth',
         SizeTextType = 'textSmall',
-        tag = TitleTag.H1,
+        aling = 'start',
+        tag = 'h1',
     } = props
 
     const HeaderTag = mapSizeToHeaderTag[tag]
 
+    const additionTitleArr = [styles[weight], styles[aling]]
+    const additionTextArr = [
+        styles[weight],
+        styles[SizeTextType],
+        styles[aling],
+    ]
+
     return (
-        <div
-        className={className}
-        >
+        <div className={className}>
             {title && (
                 <HeaderTag
-                    className={classNames(styles.title, {}, [styles[weight]])}
+                    className={classNames(styles.title, {}, additionTitleArr)}
                 >
                     {title}
                 </HeaderTag>
             )}
             {text && (
-                <p
-                    className={classNames(styles.text, {}, [styles[weight], styles[SizeTextType]])}
-                >
+                <p className={classNames(styles.text, {}, additionTextArr)}>
                     {text}
                 </p>
             )}

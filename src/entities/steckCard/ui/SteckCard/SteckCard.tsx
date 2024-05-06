@@ -1,62 +1,64 @@
 import classNames from 'classnames'
 import styles from './styles.module.css'
-import { memo, useCallback, useState } from 'react'
-import { Text, TitleTag } from '@/shared/ui/Text'
-import { SteckCardSchema } from '../../model/types/SteckCardSchema'
+import { memo } from 'react'
+import { Text } from '@/shared/ui/Text'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { HStack, VStack } from '@/shared/ui/Stack'
+import { SteckCardType } from '../../model/types/SteckCardType'
 
- interface SteckCardProps {
-   className?: string
-   steckCard: SteckCardSchema
-   isOpen: boolean
+interface SteckCardProps {
+    className?: string
+    steckCard: SteckCardType
+    isOpen: boolean
+    collapsed: boolean
+    id: number
+    onCollapsed: (id: number) => void
 }
 
 export const SteckCard = memo((props: SteckCardProps) => {
+    const { className, steckCard, collapsed, onCollapsed, id } = props
 
-const {
-className,
-steckCard,
-} = props
+    const { name, description } = steckCard
 
-const {
-text,
-description
-} = steckCard
+    const onCollapsedHalper = (id: number) => {
+        onCollapsed(id)
+    }
 
-const [isAction, setAction] = useState(false)
+    if (!collapsed) {
+        return (
+            <Button
+                theme={ButtonTheme.CLEAR}
+                onClick={() => onCollapsedHalper(id)}
+                className={classNames(styles.SteckCard, {}, [className])}
+            >
+                <HStack justify="start">
+                    <Text title={name} tag="h3" weight="ligth" />
+                </HStack>
+            </Button>
+        )
+    }
 
-const toggleOpen = useCallback(() => {
-    setAction(true)
-}, [])
-
-const toggleClose = useCallback(() => {
-    setAction(false)
-}, [])
- 
-if (!isAction) {
     return (
-    <Button theme={ButtonTheme.CLEAR} onClick={toggleOpen} className={classNames(styles.SteckCard, {}, [className])}>
-        <HStack justify='start'>
-    <Text title={text} tag={TitleTag.H3} weight='ligth'/>
-        </HStack>
-    </Button>
+        <Button
+            theme={ButtonTheme.CLEAR}
+            onClick={() => onCollapsedHalper(-1)}
+            className={classNames(styles.SteckCard, {}, [className])}
+        >
+            <VStack gap="24" align="start">
+                <Text title={name} tag="h3" weight="ligth" />
+                <VStack gap="16" className={styles.description}>
+                    {description.map((text) => (
+                        <HStack gap="24" key={text}>
+                            <Text text="•" />
+                            <Text
+                                text={text}
+                                weight="ligth"
+                                SizeTextType="textSmall"
+                            />
+                        </HStack>
+                    ))}
+                </VStack>
+            </VStack>
+        </Button>
     )
-}
-
-return (
-    <Button theme={ButtonTheme.CLEAR} onClick={toggleClose} className={classNames(styles.SteckCard, {}, [className])}>
-        <VStack gap='24' align='start'>
-    <Text title={text} tag={TitleTag.H3} weight='ligth'/>
-    <VStack gap='16' className={styles.description}>
-    {description.map((text) => (
-        <HStack gap='24' key={text}>
-            <Text text='•' />
-            <Text text={text} weight='ligth' SizeTextType='textSmall' />
-        </HStack>
-    ))}
-    </VStack>
-        </VStack>
-    </Button>
-    )
- })
+})

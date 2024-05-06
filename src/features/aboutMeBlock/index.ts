@@ -1,1 +1,1 @@
-export { AboutMeBlock } from "./ui/AboutMeBlock/AboutMeBlock";
+export { AboutMeBlock } from './ui/AboutMeBlock/AboutMeBlock'

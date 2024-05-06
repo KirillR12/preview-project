@@ -1,1 +1,1 @@
-export { FiguresLayer } from "./ui/FiguresLayer/FiguresLayer";
+export { FiguresLayer } from './ui/FiguresLayer/FiguresLayer'

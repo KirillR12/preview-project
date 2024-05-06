@@ -1,9 +1,10 @@
 .SteckBlock {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0 15px 0px;
     background: rgba(244, 244, 244, 1);
-    padding: 48px 230px 98px 230px;
+    padding: 48px 0 98px 0;
     position: relative;
     z-index: 999;
+width: 100%;
 
     &:hover {
         .hashtag {
@@ -13,9 +14,16 @@
     }
 }
 
-
 .hashtag {
     transition: all 0.2s;
-    color: rgba(244, 244, 244, 1);
+    color: transparent;
     user-select: none; 
+}
+
+.container {
+    width: 1200px;
+
+    @media (max-width: 1300px ) {
+        width: 600px;
+    }
 }

@@ -10,24 +10,19 @@ import classNames from 'classnames'
 
 interface FiguresLayerProps {
     className?: string
-    children: ReactNode
+    children?: ReactNode
 }
 
 export const FiguresLayer = memo((props: FiguresLayerProps) => {
-
-const {
-    className,
-    children
-} = props
+    const { className, children } = props
 
     return (
-    <div className={classNames(styles.FiguresLayer, {}, [className])}>
-<Icon Svg={OrangeCircle} className={styles.OrangeCircle}/>
-<Icon Svg={PinkTriangle} className={styles.PinkTriangle}/>
-<Icon Svg={PurpleTriangle} className={styles.PurpleTriangle}/>
-<Icon Svg={YellowCircle} className={styles.YellowCircle}/>
-<Icon Svg={YellowSquare} className={styles.YellowSquare}/>
-{children}
-    </div>
-  )
- })
+        <div className={classNames(styles.FiguresLayer, {}, [className])}>
+            <Icon Svg={OrangeCircle} className={styles.OrangeCircle} />
+            <Icon Svg={PinkTriangle} className={styles.PinkTriangle} />
+            <Icon Svg={PurpleTriangle} className={styles.PurpleTriangle} />
+            <Icon Svg={YellowCircle} className={styles.YellowCircle} />
+            <Icon Svg={YellowSquare} className={styles.YellowSquare} />
+        </div>
+    )
+})

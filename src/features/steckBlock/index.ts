@@ -1,1 +1,1 @@
-export { SteckBlock } from "./ui/SteckBlock/SteckBlock";
+export { SteckBlock } from './ui/SteckBlock/SteckBlock'

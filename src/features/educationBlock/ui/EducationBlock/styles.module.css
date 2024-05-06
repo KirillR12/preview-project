@@ -1,3 +1,25 @@
 .EducationBlock {
-    padding: 48px 230px 98px 230px;
+    padding: 48px 0 98px 0;
+width: 100%;
+    &:hover {
+
+        .hashtag {
+            color: rgba(117, 69, 195, 1);
+            user-select: none; 
+        }
+    }
+}
+
+.hashtag {
+    transition: all 0.2s;
+    color: transparent;
+    user-select: none; 
+}
+
+.container {
+    width: 1200px;
+
+    @media (max-width: 1300px ) {
+        width: 600px;
+    }
 }
