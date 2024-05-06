@@ -9,7 +9,6 @@ z-index: 999;
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-    z-index: -1;
     opacity: 0.5;
 }
 
@@ -17,16 +16,37 @@ z-index: 999;
     position: absolute;
     padding: 0 230px;
     top: 40px;
+
+    @media (max-width: 900px) {
+        padding: 0;
+        top: 80px;
+    }
 }
 
+.SidebarHeaderBlock {
+    position: absolute;
+    z-index: 999;
+
+    @media (max-width: 900px) {
+    width: 80%;
+        top: 50px;
+    }
+}
 
 .AboutMeBlock {
     position: absolute;
     top: 300px;
     padding: 0 230px;
-    z-index: 999;
+
+    @media (max-width: 900px) {
+        width: 100%;
+        padding: 0;
+        top: 180px;
+    }
 }
 
-.particles {
-    height: 500px;
+.btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }

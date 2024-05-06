@@ -1,20 +1,21 @@
 import { memo } from 'react'
 import { HStack } from '@/shared/ui/Stack'
 import { Text } from '@/shared/ui/Text'
-import { headerBlockData } from '../../model/data/data'
 import styles from './styles.module.css'
 import classNames from 'classnames'
 import { Link } from 'react-scroll'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { Icon } from '@/shared/ui/Icon'
 import darkTheme from '@/shared/assets/svg/darkTheme.svg'
+import { PreviewType } from '@/widgets/Preview'
 
 interface HeaderBlockProps {
     className?: string
+    preview: PreviewType[]
 }
 
 export const HeaderBlock = memo((props: HeaderBlockProps) => {
-    const { className } = props
+    const { className, preview } = props
 
     return (
         <HStack
@@ -28,8 +29,8 @@ export const HeaderBlock = memo((props: HeaderBlockProps) => {
                 className={styles.text}
                 weight="ligth"
             />
-            <HStack align="center" gap="40">
-                {headerBlockData.map((el) => (
+            <HStack align="center" gap="40" className={styles.linkBlock}>
+                {preview.map((el) => (
                     <Button theme={ButtonTheme.CLEAR}>
                         <Link
                             key={el.href}

@@ -1,3 +1,7 @@
+.SidebarHeaderBlock {
+    background-color: #fff;
+}
+
 .text {
 text-transform: uppercase;
 }
@@ -7,4 +11,8 @@ text-transform: uppercase;
     display: flex;
     flex-direction: column;
 }
+}
+
+.link {
+    cursor: pointer;
 }

@@ -7,7 +7,7 @@ import { ProjectCardType } from '../../model/types/ProjectCardSchema'
 interface ProjectCardProps {
     className?: string
     end?: boolean
-    card: any
+    card: ProjectCardType
 }
 
 export const ProjectCard = memo((props: ProjectCardProps) => {

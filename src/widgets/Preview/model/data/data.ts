@@ -1,13 +1,6 @@
-export interface HeaderBlockDataSchema {
-    text: string
-    href: string
-}
+import { PreviewType } from '@/shared/types/PreviewType'
 
-export const headerBlockData: HeaderBlockDataSchema[] = [
-    {
-        text: 'обо мне',
-        href: 'aboutMe',
-    },
+export const headerBlockData: PreviewType[] = [
     {
         text: 'проекты',
         href: 'project',

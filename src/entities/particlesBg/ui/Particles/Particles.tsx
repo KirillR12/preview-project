@@ -1,6 +1,7 @@
 import styles from './styles.module.css'
 import { memo } from 'react'
 import { useCallback } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import Particles from 'react-tsparticles'
 import type { Container, Engine } from 'tsparticles-engine'
 import { loadSlim } from 'tsparticles-slim'
@@ -18,6 +19,10 @@ export const ParticlesBg = memo(() => {
         []
     )
 
+    const isModule = useMediaQuery({ query: '(min-width: 900px)' })
+
+    const value = isModule ? 20 : 50
+
     return (
         <Particles
             className={styles.particles}
@@ -25,7 +30,7 @@ export const ParticlesBg = memo(() => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                fpsLimit: 120,
+                fpsLimit: 160,
                 particles: {
                     color: {
                         value: 'rgb(154, 92, 255)',
@@ -52,7 +57,7 @@ export const ParticlesBg = memo(() => {
                             enable: true,
                             area: 1000,
                         },
-                        value: 10,
+                        value: value,
                     },
                 },
             }}

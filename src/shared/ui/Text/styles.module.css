@@ -1,13 +1,25 @@
 .textSmall {
 font-size: 16px;
+
+@media (max-width: 700px ) {
+    font-size: 8px;
+}
 }
 
 .textMedium {
 font-size: 32px;
+
+@media (max-width: 700px ) {
+    font-size: 16px;
+}
 }
 
 .textBig {
 font-size: 36px;
+
+@media (max-width: 700px ) {
+    font-size: 18px;
+}
 }
 
 .ligth {
@@ -25,23 +37,23 @@ font-weight: 700;
 h1 {
 font-size: 72px;
 
-    @media (max-width: 1300px ) {
-        font-size: 36px;
+    @media (max-width: 1400px ) {
+        font-size: 28px;
     }
 }
     
 h2 {
 font-size: 48px;
 
-@media (max-width: 1300px ) {
-    font-size: 24px;
+@media (max-width: 1400px ) {
+    font-size: 18px;
 }
 }
 
 h3 {
 font-size: 36px;
 
-@media (max-width: 1300px ) {
+@media (max-width: 1400px ) {
     font-size: 18px;
 }
 }
@@ -49,8 +61,26 @@ font-size: 36px;
 h4 {
 font-size: 24px;
 
-@media (max-width: 1300px ) {
+@media (max-width: 1400px ) {
     font-size: 12px;
 }
 }
 
+
+.start {
+    text-align: start;
+}
+
+.center {
+    text-align: center;
+}
+
+.end {
+    text-align: end;
+}
+
+p {
+    @media (max-width: 1400px ) {
+        font-size: 12px;
+    }
+}

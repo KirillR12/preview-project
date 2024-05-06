@@ -8,7 +8,6 @@ import { Element } from 'react-scroll'
 import { getProject } from '@/shared/api/api'
 import { project } from '@/shared/constant/query'
 import { useQuery } from 'react-query'
-import TodoList from '@/shared/assets/img/todoList.png'
 
 interface ProjectBlockProps {
     className?: string
@@ -16,13 +15,6 @@ interface ProjectBlockProps {
 
 export const ProjectBlock = memo((props: ProjectBlockProps) => {
     const { className } = props
-
-    const ell = {
-        img: TodoList,
-        name: 'hello',
-        gitLink: '',
-        description: '',
-    }
 
     const { data, isError, isLoading } = useQuery(project, getProject)
 
@@ -55,7 +47,6 @@ export const ProjectBlock = memo((props: ProjectBlockProps) => {
                             weight="medium"
                         />
                     </HStack>
-                    <ProjectCard card={ell} />
                     {data.map((el, i) =>
                         i % 2 ? (
                             <ProjectCard card={el} end />

@@ -4,7 +4,11 @@
     padding: 48px 0 98px 0;
     position: relative;
     z-index: 999;
-width: 100%;
+    width: 100%;
+
+    @media (max-width: 1400px) {
+    padding: 28px 0;
+    };
 
     &:hover {
         .hashtag {
@@ -18,12 +22,22 @@ width: 100%;
     transition: all 0.2s;
     color: transparent;
     user-select: none; 
+
+    @media (max-width: 700px) {
+        display: none;
+     }
 }
 
 .container {
     width: 1200px;
 
-    @media (max-width: 1300px ) {
+    @media (max-width: 1400px) {
         width: 600px;
+        display: flex;
+        flex-direction: column;
+    };
+
+    @media (max-width: 700px) {
+        width: 270px;
     }
 }
