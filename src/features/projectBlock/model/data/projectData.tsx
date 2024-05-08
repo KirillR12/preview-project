@@ -30,7 +30,7 @@ export const projectData = [
     },
     {
         name: 'Админка для работы с данными',
-        img: 'https://4.downloader.disk.yandex.ru/preview/2d7ee125957299e4d3f7202a4fc160e2dbd9d308406c5e8611518e25af7a8c8e/inf/gfkRJU9hjbbnNmJ1IH2dxA4NwFxrUib-pwBYRj21dS9Ao06cMKQ6h9Vp8KOwbfP8ZETKNii-sTBH4Zf6mS30Hw%3D%3D?uid=197415950&filename=machines.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=197415950&tknv=v2&size=2880x1558',
+        img: 'https://sun9-24.userapi.com/impg/bs_5OhjBKREARGcV_2knvuXNFW5zdIFxuRi7-A/1pIPCFUiUmA.jpg?size=1536x738&quality=95&sign=ef346b8a976f21e006a468e682a587af&type=album',
         description: [
             'В проекте реализована админ-панель.',
             'Верстка по макету.',
