@@ -1,7 +1,7 @@
 export const projectData = [
     {
         name: 'Список задач',
-        img: 'https://1.downloader.disk.yandex.ru/preview/3510a8e04f4b9d511290ee5f7dbadcf5ff06aa8ab96d072b4044d1505406a7bc/inf/4tyWCik5z9Cg6-jTt-IaUYzbv3c_PcBb0YWhqcy6dPjASus7IpGwNC760X52hH2JA5FCtjajB6FG1SyyaFeccQ%3D%3D?uid=197415950&filename=todoList.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=197415950&tknv=v2&size=2880x1558',
+        img: 'https://sun9-36.userapi.com/impg/Jw9QxnGpDd1AGPZkUWRAXsD2hmqasUVe5abzpQ/nA7uj87PBk4.jpg?size=1560x740&quality=95&sign=b4ed8c21cf0aaf3fa141312b8ad47362&type=album',
         description: [
             'Базовый проект для знакомства с библиотекой React.',
             'Познакомился с реактивностью, context, virtual dom react, jsx, create-react-app.',
@@ -11,7 +11,7 @@ export const projectData = [
     },
     {
         name: 'Интернет магазин еды для собак',
-        img: 'https://4.downloader.disk.yandex.ru/preview/9c13153dac2bacedaa916a2dda46f9e8145fd5c092136a7bfc535237fc668400/inf/L7Nmo2DWbP9DRyAVgx6MxESfaMvwcCO7wkynpyiuMiI1PGfgKzYPKIF5n_oLcqPssr6GbKTnrROMiUgqsbQgaw%3D%3D?uid=197415950&filename=dogFood.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=197415950&tknv=v2&size=2880x1558',
+        img: 'https://sun9-40.userapi.com/impg/IuPArzjFf7neohBj8u_A-fCfSxzJrkafSI_Osw/ITSv5i-wX4U.jpg?size=1538x740&quality=95&sign=f653ee292653a28ae580d841f0291023&type=album',
         description: [
             'В проекте реализован интернет магазин еды для собак.',
             'Реализовано роутинг, авторизации, добавление товара в корзину, работа с REST API.',
@@ -21,7 +21,7 @@ export const projectData = [
     },
     {
         name: 'Интернет магазин электросамокатов',
-        img: 'https://3.downloader.disk.yandex.ru/preview/5154bd62b3a11db48ed51d3e628c6a0b0a8fe8ee7f8e6cfded0ab46741b11479/inf/NhibSWi_G8Xj6SHMji7EP5ybt8MndMB44hKxFWlqwDIBCzlw7y-97zzDI966QlV0IZ7Ode6kDJq-98psKOhWsA%3D%3D?uid=197415950&filename=cugo.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=197415950&tknv=v2&size=2880x1558',
+        img: 'https://sun9-49.userapi.com/impg/RsZBZWHae4HijjQ041R3R9rG1G2E5cnmCnVPMg/UYr0XwxOj_E.jpg?size=1540x740&quality=95&sign=d99eb3c680c5571a8099fae19b429b34&type=album',
         description: [
             'В проекте реализованна верстка по макету, json-server для хранения данных.',
             'Несколько страниц: детальная страница, корзина, страница с товарами, шапка, футер.',
@@ -42,7 +42,7 @@ export const projectData = [
     },
     {
         name: 'Сайт превью',
-        img: 'https://1.downloader.disk.yandex.ru/preview/41db523b6d55ac4c76ba47c9df71c3b1794161f4cff8538bd11698c54a922e00/inf/X_2zS98rO5Hw5oc64_IQog4NwFxrUib-pwBYRj21dS_EwFp5mcu917SVUdSoXJouEfjCa8-Be4AF3gkL_yhTvw%3D%3D?uid=197415950&filename=preview.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=197415950&tknv=v2&size=2880x1558',
+        img: 'https://sun9-22.userapi.com/impg/x3hsrWxg8JDthKB6Pculu2FO0QnXc8_GXpcQIA/14E77UFqx1Y.jpg?size=1540x740&quality=95&sign=c48535f0f6b0bb31d0f82f56d8fa1286&type=album',
         description: [
             'Сайт на котором вы сейчас находитесь.',
             'Разработан макет, БД, настроен DNS сервер, https.',
@@ -53,7 +53,7 @@ export const projectData = [
     },
     {
         name: 'Форум со статьями',
-        img: 'https://4.downloader.disk.yandex.ru/preview/da67e12f9e12034fdfdca5e092fc1356d81bce9045db2b634498a8259289422c/inf/w4WzpDBtOkj9oOPFrRJEBZybt8MndMB44hKxFWlqwDKJa9mWEkmNOalGLDZRlpyPhmxoPeAbwg1rBawC-uH4gQ%3D%3D?uid=197415950&filename=article.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=197415950&tknv=v2&size=2880x1558',
+        img: 'https://sun9-72.userapi.com/impg/-d11nq5nmW1913tjGikuI1er0QrRA7krhQEfuQ/w5bMR7EFaGg.jpg?size=2560x1382&quality=95&sign=b372e6c6f66cfb2b7d1a4690c6b66bc4&type=album',
         description: [
             'Большой проект, с двумя сборщиками, FSD, сделан редизайн.',
             'Полная пирамида тестирования.',

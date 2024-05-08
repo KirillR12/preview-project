@@ -8,7 +8,7 @@ export const educationData = [
         link: 'https://habr.com/ru/articles/664360/',
     },
     {
-        img: 'https://2.downloader.disk.yandex.ru/preview/439a87477b5b1ad5f9c71436623e6378071f34717bc5a4a95c8fac3e63483d13/inf/PF_JYwl6jF3HOXbsRJ0EywN-LHRH_N9NwVntyzgex6cJOyb9n5lgDpXf0zzuKe8c_A-8bVicZ_8o6OdZSpXVJQ%3D%3D?uid=197415950&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-05-06%20%D0%B2%2013.58.15.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=197415950&tknv=v2&size=2880x1558',
+        img: 'https://sun9-22.userapi.com/impg/yVvW_EP9VFho-Y_65qz3Z-nwtdfKrYQEFW-_8g/XZVhsMsOIKs.jpg?size=2560x1149&quality=95&sign=2e27587e07629447e645b5b8c528e20d&type=album',
         link: 'https://sberuniversity.ru/learning/programmes/tsifrovye-professii/frontend-razrabotchik/',
     },
     {
