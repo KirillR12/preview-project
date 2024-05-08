@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { Icon } from '@/shared/ui/Icon'
 import darkTheme from '@/shared/assets/svg/darkTheme.svg'
-import { PreviewType } from '@/widgets/Preview'
+import { PreviewType } from '@/shared/types/PreviewType'
 
 interface HeaderBlockProps {
     className?: string

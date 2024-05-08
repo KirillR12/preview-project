@@ -13,7 +13,7 @@ interface ProjectCardProps {
 export const ProjectCard = memo((props: ProjectCardProps) => {
     const { className, end, card } = props
 
-    const { name, img, gitLink, description } = card
+    const { img } = card
 
     if (!end) {
         return (

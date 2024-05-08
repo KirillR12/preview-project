@@ -14,7 +14,7 @@ interface FiguresLayerProps {
 }
 
 export const FiguresLayer = memo((props: FiguresLayerProps) => {
-    const { className, children } = props
+    const { className } = props
 
     return (
         <div className={classNames(styles.FiguresLayer, {}, [className])}>
