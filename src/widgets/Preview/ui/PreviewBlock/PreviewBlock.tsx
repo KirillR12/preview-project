@@ -18,7 +18,7 @@ export const PreviewBlock = memo((props: PreviewBlockProps) => {
 
     const isModule = useMediaQuery({ query: '(min-width: 900px)' })
 
-    const [collapsed, setCollapsed] = useState(false)
+    const [collapsed, setCollapsed] = useState(true)
 
     const collapsedBtnFunc = useCallback(() => {
         setCollapsed((prev) => !prev)
@@ -39,9 +39,11 @@ export const PreviewBlock = memo((props: PreviewBlockProps) => {
                     collapsed={collapsed}
                 />
             )}
-            <Button onClick={collapsedBtnFunc} className={styles.btn}>
-                BTN
-            </Button>
+            {!isModule ? (
+                <Button onClick={collapsedBtnFunc} className={styles.btn}>
+                    BTN
+                </Button>
+            ) : null}
             <div className={styles.paddingContent}>
                 <AboutMeBlock className={styles.AboutMeBlock} />
             </div>

@@ -3,7 +3,7 @@ import { SteckCardType } from '@/entities/steckCard'
 import { EducationCardType } from '@/entities/swiperCard'
 import axios, { AxiosResponse } from 'axios'
 
-const url = 'http://localhost:8000/'
+const url = __API__
 
 export const getProject = async () => {
     try {
