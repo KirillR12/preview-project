@@ -2,6 +2,7 @@ import { memo } from 'react'
 import { VStack } from '@/shared/ui/Stack'
 import { Text } from '@/shared/ui/Text'
 import styles from './styles.module.css'
+import classNames from 'classnames'
 
 interface AboutMeBlockProps {
     className?: string
@@ -11,7 +12,10 @@ export const AboutMeBlock = memo((props: AboutMeBlockProps) => {
     const { className } = props
 
     return (
-        <VStack className={className}>
+        <VStack
+            className={classNames(styles.AboutMeBlock, {}, [className])}
+            max
+        >
             <Text
                 title="Привет, я Кирилл!"
                 tag="h1"

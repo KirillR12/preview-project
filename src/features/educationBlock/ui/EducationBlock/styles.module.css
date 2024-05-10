@@ -28,13 +28,9 @@
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
 
-    @media (max-width: 1024px) {
-        width: 600px;
-    };
-
-    @media (max-width: 430px) {
+    @media (max-width: 1440px) {
         width: 100%;
         height: 200px;
         padding: 0 5%;

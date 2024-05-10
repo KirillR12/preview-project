@@ -6,14 +6,9 @@
     z-index: 999;
     width: 100%;
 
-    @media (max-width: 1024px) {
-    padding: 28px 0;
+    @media (max-width: 1440px) {
+    padding: 28px 0 56px 0;
     }
-
-    @media (max-width: 430px) {
-        padding: 28px 0;
-    };
-    
 
     &:hover {
         .hashtag {
@@ -28,20 +23,16 @@
     color: transparent;
     user-select: none; 
 
-    @media (max-width: 1024px) {
+    @media screen {
         display: none;
      }
 }
 
 .container {
     max-width: 1200px;
+    width: 100%;
 
-    @media (max-width: 1024px) {
-        width: 600px;
-    };
-
-    @media (max-width: 430px) {
-        width: 100%;
-        padding: 0 5%;
+    @media screen and (max-width: 1440px) {
+        width: 90%;
     }
 }

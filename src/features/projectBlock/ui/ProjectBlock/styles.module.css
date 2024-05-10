@@ -5,8 +5,8 @@
     width: 100%;
     color: var(--text-color);
     
-        @media (max-width: 1024px) {
-            width: 700px;
+        @media (max-width: 1440px) {
+            
             padding: 28px 0;
         };
     

@@ -10,6 +10,7 @@ import { SidebarHeaderBlock } from '@/features/sidebarHeaderBlock'
 import { Button } from '@/shared/ui/Button'
 import { Icon } from '@/shared/ui/Icon'
 import Menu from '@/shared/assets/svg/menu.svg'
+import { HStack } from '@/shared/ui/Stack'
 
 interface PreviewBlockProps {
     className?: string
@@ -30,10 +31,9 @@ export const PreviewBlock = memo((props: PreviewBlockProps) => {
         <div className={classNames(styles.PreviewBlock, '', [className])}>
             <img className={styles.img} src={img} />
             {isModule ? (
-                <HeaderBlock
-                    className={styles.HeaderBlock}
-                    preview={headerBlockData}
-                />
+                <HStack className={styles.HeaderBlock} justify="center" max>
+                    <HeaderBlock preview={headerBlockData} />
+                </HStack>
             ) : (
                 <SidebarHeaderBlock
                     preview={headerBlockData}
@@ -47,9 +47,9 @@ export const PreviewBlock = memo((props: PreviewBlockProps) => {
                     <Icon Svg={Menu} />
                 </Button>
             ) : null}
-            <div className={styles.paddingContent}>
-                <AboutMeBlock className={styles.AboutMeBlock} />
-            </div>
+            <HStack max className={styles.AboutMeBlock} justify="center">
+                <AboutMeBlock />
+            </HStack>
         </div>
     )
 })

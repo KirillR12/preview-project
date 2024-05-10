@@ -4,7 +4,7 @@
     padding: 50px;
     object-fit: cover;
 
-    @media (max-width: 430px ) {
+    @media (max-width: 576px ) {
         padding: 0px;
         display: flex;
         justify-content: center;
@@ -17,7 +17,7 @@
     height: 370px;
     position: relative;
     
-    @media (max-width: 1400px ) {
+    @media (max-width: 1024px ) {
         width: 520px;
         height: 245px;
     }
@@ -46,13 +46,13 @@
     filter: blur(3px);
 
 
-    @media (max-width: 1400px ) {
+    @media screen and (max-width: 1024px ) {
         width: 520px;
         height: 245px;
     }
 
 
-    @media (max-width: 430px ) {
+    @media screen and (max-width: 430px ) {
         width: 100%;
         height: 100%;
     }

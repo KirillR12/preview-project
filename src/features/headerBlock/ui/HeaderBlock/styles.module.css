@@ -3,9 +3,6 @@ text-transform: uppercase;
 color: #fff;
 }
 
-.linkBlock {
-@media (max-width: 700px) {
-    display: flex;
-    flex-direction: column;
-}
+.HeaderBlock {
+max-width: 1200px;
 }
