@@ -36,7 +36,7 @@ export const SteckBlock = memo((props: SteckBlockProps) => {
                         weight="medium"
                     />
                 </HStack>
-                <VStack gap="16" max className={styles.container}>
+                <VStack gap="16" className={styles.container} max>
                     <Hr max />
                     {steckData.map((el, i) => (
                         <>

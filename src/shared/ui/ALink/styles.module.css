@@ -5,7 +5,7 @@
 
     &:hover {
         transition: all 0.2s;
-        color: rgb(154, 92, 255)
+        color: red
     }
 }
 
@@ -13,3 +13,12 @@
     padding: 0;
 }
 
+.outline {
+    background-color: rgb(154, 92, 255);
+    padding: 10px 50px;
+    border: none;
+
+        @media (max-width: 430px ) {
+            padding: 7px 35px;
+    }
+}

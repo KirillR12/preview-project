@@ -14,6 +14,26 @@ interface ContactBlockProps {
 export const ContactBlock = memo((props: ContactBlockProps) => {
     const { className } = props
 
+    const desktop = (
+        <HStack gap="16" justify="between" className={styles.container}>
+            {contactsData.map((el) => (
+                <ALink key={el.link} target="_blank" href={el.link}>
+                    <Text title={el.name} tag="h3" aling="center" />
+                </ALink>
+            ))}
+        </HStack>
+    )
+
+    const mobile = (
+        <HStack gap="16" justify="between" className={styles.containerMobile}>
+            {contactsData.map((el) => (
+                <ALink key={el.link} target="_blank" href={el.link}>
+                    <Text title={el.name} tag="h3" aling="center" />
+                </ALink>
+            ))}
+        </HStack>
+    )
+
     return (
         <Element
             name={'contacts'}
@@ -29,13 +49,7 @@ export const ContactBlock = memo((props: ContactBlockProps) => {
                         weight="medium"
                     />
                 </HStack>
-                <HStack gap="16" justify="between" className={styles.container}>
-                    {contactsData.map((el) => (
-                        <ALink key={el.link} target="_blank" href={el.link}>
-                            <Text title={el.name} tag="h3" />
-                        </ALink>
-                    ))}
-                </HStack>
+                {desktop}
             </VStack>
         </Element>
     )

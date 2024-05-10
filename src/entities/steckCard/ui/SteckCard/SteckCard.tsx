@@ -39,26 +39,29 @@ export const SteckCard = memo((props: SteckCardProps) => {
     }
 
     return (
-        <Button
-            theme={ButtonTheme.CLEAR}
-            onClick={() => onCollapsedHalper(-1)}
+        <VStack
+            gap="16"
+            align="start"
             className={classNames(styles.SteckCard, {}, [className])}
         >
-            <VStack gap="24" align="start">
+            <Button
+                theme={ButtonTheme.CLEAR}
+                onClick={() => onCollapsedHalper(-1)}
+            >
                 <Text title={name} tag="h3" weight="ligth" />
-                <VStack gap="16" className={styles.description}>
-                    {description.map((text) => (
-                        <HStack gap="24" key={text}>
-                            <Text text="•" />
-                            <Text
-                                text={text}
-                                weight="ligth"
-                                SizeTextType="textSmall"
-                            />
-                        </HStack>
-                    ))}
-                </VStack>
+            </Button>
+            <VStack gap="16" className={styles.description}>
+                {description.map((text) => (
+                    <HStack gap="24" key={text}>
+                        <Text text="•" SizeTextType="textMedium" />
+                        <Text
+                            text={text}
+                            weight="ligth"
+                            SizeTextType="textMedium"
+                        />
+                    </HStack>
+                ))}
             </VStack>
-        </Button>
+        </VStack>
     )
 })

@@ -7,6 +7,8 @@ import { Link } from 'react-scroll'
 import { Icon } from '@/shared/ui/Icon'
 import darkTheme from '@/shared/assets/svg/darkTheme.svg'
 import { PreviewType } from '@/shared/types/PreviewType'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { useTheme } from '@/shared/hooks/useTheme'
 
 interface HeaderBlockProps {
     className?: string
@@ -15,6 +17,8 @@ interface HeaderBlockProps {
 
 export const HeaderBlock = memo((props: HeaderBlockProps) => {
     const { className, preview } = props
+
+    const { toggleTheme } = useTheme()
 
     return (
         <HStack
@@ -46,7 +50,9 @@ export const HeaderBlock = memo((props: HeaderBlockProps) => {
                         />
                     </Link>
                 ))}
-                <Icon Svg={darkTheme} />
+                <Button theme={ButtonTheme.CLEAR} onClick={toggleTheme}>
+                    <Icon Svg={darkTheme} />
+                </Button>
             </HStack>
         </HStack>
     )

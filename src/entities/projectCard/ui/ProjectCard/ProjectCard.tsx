@@ -1,8 +1,10 @@
 import classNames from 'classnames'
 import styles from './styles.module.css'
 import { memo } from 'react'
-import { HStack } from '@/shared/ui/Stack'
+import { HStack, VStack } from '@/shared/ui/Stack'
 import { ProjectCardType } from '../../model/types/ProjectCardSchema'
+import { Text } from '@/shared/ui/Text'
+import { ALink } from '@/shared/ui/ALink'
 
 interface ProjectCardProps {
     className?: string
@@ -13,7 +15,7 @@ interface ProjectCardProps {
 export const ProjectCard = memo((props: ProjectCardProps) => {
     const { className, end, card } = props
 
-    const { img } = card
+    const { img, name, gitLink } = card
 
     if (!end) {
         return (
@@ -22,7 +24,19 @@ export const ProjectCard = memo((props: ProjectCardProps) => {
                 max
                 className={classNames(styles.ProjectCard, {}, [className])}
             >
-                <img src={img} className={styles.img} />
+                <div className={styles.containerImg}>
+                    <img src={img} className={styles.img} />
+                    <VStack className={styles.contant} gap="24">
+                        <Text title={name} tag="h3" weight="medium" white />
+                        <ALink theme="outline" href={gitLink} target="_blank">
+                            <Text
+                                text="Подробнее"
+                                SizeTextType="textSmall"
+                                white
+                            />
+                        </ALink>
+                    </VStack>
+                </div>
             </HStack>
         )
     }
@@ -33,7 +47,15 @@ export const ProjectCard = memo((props: ProjectCardProps) => {
             max
             className={classNames(styles.ProjectCard, {}, [className])}
         >
-            <img src={img} className={styles.img} />
+            <div className={styles.containerImg}>
+                <img src={img} className={styles.img} />
+                <VStack className={styles.contant} gap="24">
+                    <Text title={name} tag="h3" weight="medium" white />
+                    <ALink theme="outline" href={gitLink} target="_blank">
+                        <Text text="Подробнее" SizeTextType="textSmall" white />
+                    </ALink>
+                </VStack>
+            </div>
         </HStack>
     )
 })

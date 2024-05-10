@@ -21,7 +21,7 @@ export const ParticlesBg = memo(() => {
 
     const isModule = useMediaQuery({ query: '(min-width: 900px)' })
 
-    const value = isModule ? 20 : 50
+    const value = isModule ? 10 : 50
 
     return (
         <Particles

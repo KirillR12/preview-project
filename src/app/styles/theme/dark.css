@@ -1,0 +1,8 @@
+.theme_dark {
+    --bg-color: #000;
+    --bg-color-inverted: rgba(0, 1, 27, 1);
+    --text-color: #fff;
+    --text-color-inverted: #000;
+    --text-color-white: #fff;
+    --shadow-color: rgba(0, 10, 255, 0.35);
+}

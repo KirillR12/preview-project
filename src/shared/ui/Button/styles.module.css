@@ -2,6 +2,12 @@
     padding: 10px 15px;
 
     cursor: pointer;
+
+    @media screen (max-width: 1024px) {
+        &:hover {
+            color: none;
+        }
+    }
     
     &:hover {
         transition: all 0.2s;
@@ -9,11 +15,21 @@
     }
 }
 
-.clear,
-.clear_inverted {
+.clear {
     padding: 10px 0;
     border: none;
 
     background: none;
     outline: none;
+
+    &:hover {
+        transition: all 0.2s;
+        color: rgb(154, 92, 255)
+    }
+}
+
+.outline {
+background-color: rgb(154, 92, 255);
+padding: 10px 50px;
+border: none;
 }

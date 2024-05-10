@@ -1,6 +1,6 @@
 .Hr {
     height: 0.5px;
-    background: rgba(64, 87, 113);
+    background: var(--text-color);
     border: none;
     z-index: 999;
 }
@@ -15,12 +15,8 @@
 
 .hrVertically {
     width: 0.5px;   
-    background: rgba(64, 87, 113);
+    background: var(--text-color);
     border: none;
-    border-left: 0.5px solid rgba(207,213,221);
+    border-left: 0.5px solid var(--shadow-color);
     z-index: 999;
-   }
-
-.inverted {
-    background: rgba(207,213,221);
 }

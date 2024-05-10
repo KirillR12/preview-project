@@ -1,18 +1,31 @@
 .SidebarHeaderBlock {
-    background-color: #fff;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+}
+
+.link {
+    width: 100%;
 }
 
 .text {
 text-transform: uppercase;
+color: #fff;
+padding: 20px;
 }
 
 .linkBlock {
-@media (max-width: 700px) {
-    display: flex;
-    flex-direction: column;
-}
+width: 70%;
 }
 
 .link {
     cursor: pointer;
+}
+
+.btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 5%;
+    margin-left: 90%;
 }

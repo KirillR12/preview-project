@@ -19,7 +19,7 @@ export const EducationBlock = memo((props: EducationBlockProps) => {
             name={'education'}
             className={classNames(styles.EducationBlock, {}, [className])}
         >
-            <VStack gap="48" align="center">
+            <VStack gap="48" align="center" max>
                 <HStack justify="center" gap="16" max>
                     <Text title="Обучение" tag="h2" weight="medium" />
                     <Text

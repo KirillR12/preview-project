@@ -8,6 +8,8 @@ import { headerBlockData } from '../../model/data/data'
 import { useMediaQuery } from 'react-responsive'
 import { SidebarHeaderBlock } from '@/features/sidebarHeaderBlock'
 import { Button } from '@/shared/ui/Button'
+import { Icon } from '@/shared/ui/Icon'
+import Menu from '@/shared/assets/svg/menu.svg'
 
 interface PreviewBlockProps {
     className?: string
@@ -37,11 +39,12 @@ export const PreviewBlock = memo((props: PreviewBlockProps) => {
                     preview={headerBlockData}
                     className={styles.SidebarHeaderBlock}
                     collapsed={collapsed}
+                    onCallapsed={collapsedBtnFunc}
                 />
             )}
             {!isModule ? (
                 <Button onClick={collapsedBtnFunc} className={styles.btn}>
-                    BTN
+                    <Icon Svg={Menu} />
                 </Button>
             ) : null}
             <div className={styles.paddingContent}>

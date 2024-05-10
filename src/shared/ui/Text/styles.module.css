@@ -1,5 +1,13 @@
+.divText {
+    color: var(--text-color);
+    position: relative;
+    z-index: var(--z-index-text: 999);
+}
+
 .textSmall {
 font-size: 16px;
+font-weight: 300;
+
 
 @media (max-width: 1024px ) {
     font-size: 8px;
@@ -8,6 +16,7 @@ font-size: 16px;
 
 .textMedium {
 font-size: 32px;
+font-weight: 300;
 
 @media (max-width: 1024px ) {
     font-size: 16px;
@@ -38,7 +47,7 @@ h1 {
 font-size: 72px;
 
     @media (max-width: 1024px ) {
-        font-size: 28px;
+        font-size: 36px;
     }
 }
     
@@ -46,7 +55,7 @@ h2 {
 font-size: 48px;
 
 @media (max-width: 1024px ) {
-    font-size: 18px;
+    font-size: 24px;
 }
 }
 
@@ -83,4 +92,8 @@ p {
     @media (max-width: 1024px ) {
         font-size: 12px;
     }
+}
+
+.white {
+color: var(--text-color-white)
 }
