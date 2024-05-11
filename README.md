@@ -1,3 +1,7 @@
+Ссылка на проект - https://fedotov-preview.ru/
+
+![Иллюстрация к проекту](https://github.com/KirillR12/preview-project/assets/111389448/201599ca-276d-493d-a837-a7202d3576c3)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and
