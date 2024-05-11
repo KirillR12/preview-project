@@ -6,6 +6,7 @@ import { HStack, VStack } from '@/shared/ui/Stack'
 import { Text } from '@/shared/ui/Text'
 import { ALink } from '@/shared/ui/ALink'
 import { contactsData } from '../../model/data/contactsData'
+import { useTranslation } from 'react-i18next'
 
 interface ContactBlockProps {
     className?: string
@@ -14,11 +15,18 @@ interface ContactBlockProps {
 export const ContactBlock = memo((props: ContactBlockProps) => {
     const { className } = props
 
+    const { t } = useTranslation()
+
     const contant = (
         <HStack gap="16" justify="between" className={styles.container}>
             {contactsData.map((el) => (
-                <ALink key={el.link} target="_blank" href={el.link}>
-                    <Text title={el.name} tag="h3" aling="center" />
+                <ALink
+                    key={el.link}
+                    target="_blank"
+                    href={el.link}
+                    theme="clear"
+                >
+                    <Text title={el.name} tag="h3" aling="center" btn />
                 </ALink>
             ))}
         </HStack>
@@ -31,7 +39,7 @@ export const ContactBlock = memo((props: ContactBlockProps) => {
         >
             <VStack gap="48" align="center">
                 <HStack className={styles.title} justify="center" gap="16" max>
-                    <Text title="Контакты" tag="h2" weight="medium" />
+                    <Text title={t('Контакты')} tag="h2" weight="medium" />
                     <Text
                         className={styles.hashtag}
                         title="#"

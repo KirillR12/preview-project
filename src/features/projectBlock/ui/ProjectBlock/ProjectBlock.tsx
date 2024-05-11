@@ -6,6 +6,7 @@ import styles from './styles.module.css'
 import classNames from 'classnames'
 import { Element } from 'react-scroll'
 import { projectData } from '../../model/data/projectData'
+import { useTranslation } from 'react-i18next'
 
 interface ProjectBlockProps {
     className?: string
@@ -14,6 +15,8 @@ interface ProjectBlockProps {
 export const ProjectBlock = memo((props: ProjectBlockProps) => {
     const { className } = props
 
+    const { t } = useTranslation()
+
     return (
         <Element
             name={'project'}
@@ -21,7 +24,7 @@ export const ProjectBlock = memo((props: ProjectBlockProps) => {
         >
             <VStack gap="48" align="center" max>
                 <HStack className={styles.title} justify="center" gap="16" max>
-                    <Text tag="h2" title="Проекты" weight="medium" />
+                    <Text tag="h2" title={t('Проекты')} weight="medium" />
                     <Text
                         className={styles.hashtag}
                         title="#"

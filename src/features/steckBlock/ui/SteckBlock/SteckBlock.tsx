@@ -7,6 +7,7 @@ import { SteckCard } from '@/entities/steckCard'
 import { Element } from 'react-scroll'
 import { Hr } from '@/shared/ui/Hr/Hr'
 import { steckData } from '../../model/data/steckData'
+import { useTranslation } from 'react-i18next'
 
 interface SteckBlockProps {
     className?: string
@@ -21,6 +22,8 @@ export const SteckBlock = memo((props: SteckBlockProps) => {
         setCollapsed(id)
     }, [])
 
+    const { t } = useTranslation()
+
     return (
         <Element
             name={'steck'}
@@ -28,7 +31,7 @@ export const SteckBlock = memo((props: SteckBlockProps) => {
         >
             <VStack gap="48" max align="center">
                 <HStack className={styles.title} justify="center" gap="16" max>
-                    <Text title="Навыки" tag="h2" weight="medium" />
+                    <Text title={t('Навыки')} tag="h2" weight="medium" />
                     <Text
                         className={styles.hashtag}
                         title="#"

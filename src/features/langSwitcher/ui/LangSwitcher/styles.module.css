@@ -1,7 +1,3 @@
-.HeaderBlock {
-max-width: 1200px;
-}
-
 .text {
     text-transform: uppercase;
     color: var(--text-color-white);

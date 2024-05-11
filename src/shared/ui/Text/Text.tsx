@@ -17,6 +17,8 @@ interface TextProps {
     tag?: TitleTag
     aling?: TextAlign
     white?: boolean
+    btn?: boolean
+    hashtag?: boolean
 }
 
 const mapSizeToHeaderTag: Record<TitleTag, HeaderTagType> = {
@@ -36,6 +38,8 @@ export const Text = memo((props: TextProps) => {
         aling = 'start',
         tag = 'h1',
         white,
+        btn,
+        hashtag,
     } = props
 
     const HeaderTag = mapSizeToHeaderTag[tag]
@@ -47,12 +51,14 @@ export const Text = memo((props: TextProps) => {
         styles[aling],
     ]
 
+    const mods = {
+        [styles.white]: white,
+        [styles.btn]: btn,
+        [styles.hashtag]: hashtag,
+    }
+
     return (
-        <div
-            className={classNames(styles.divText, { [styles.white]: white }, [
-                className,
-            ])}
-        >
+        <div className={classNames(styles.divText, mods, [className])}>
             {title && (
                 <HeaderTag
                     className={classNames(styles.title, {}, additionTitleArr)}

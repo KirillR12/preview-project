@@ -4,6 +4,10 @@
     padding: 50px;
     object-fit: cover;
 
+    @media (max-width: 1024px) {
+        padding: 28px 0;
+    }
+
     @media (max-width: 576px ) {
         padding: 0px;
         display: flex;
@@ -13,46 +17,43 @@
 
 .containerImg {
     background-color: black;
-    box-shadow: var(--shadow-color) 0 0 150px 0px;
+    box-shadow: var(--shadow-color) 0 0 350px 20px;
     height: 370px;
     position: relative;
+    object-fit: cover;
     
-    @media (max-width: 1024px ) {
+    @media screen and (max-width: 1024px ) {
         width: 520px;
         height: 245px;
-    }
-
-
-    @media (max-width: 430px ) {
         margin: 0 5%;
-        height: 184px;
-        width: 100%;
-        box-shadow: var(--shadow-color) 0 0 20px 0px;
     }
 
+    @media screen and (max-width: 560px ) {
+        margin: 0 5%;
+        width: 100%;
+        height: 100%;
+        box-shadow: var(--shadow-color) 0 0 170px 5px;
+    }
 }
 
 .contant {
     position: absolute;
     top: 45%;
     left: 10%;
-    width: 80%;
+
+    @media screen and (max-width: 1024px ) {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+    }
 }
 
 .img {
-    width: 780px;
-    height: 370px;
+    width: 100%;
+    height: 100%;
     opacity: 0.2;
-    filter: blur(3px);
-
 
     @media screen and (max-width: 1024px ) {
-        width: 520px;
-        height: 245px;
-    }
-
-
-    @media screen and (max-width: 430px ) {
         width: 100%;
         height: 100%;
     }

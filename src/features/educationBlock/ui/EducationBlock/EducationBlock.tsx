@@ -6,6 +6,7 @@ import { SwiperCard } from '@/entities/swiperCard'
 import { HStack, VStack } from '@/shared/ui/Stack'
 import { Element } from 'react-scroll'
 import { educationData } from '../../model/data/educationData'
+import { useTranslation } from 'react-i18next'
 
 interface EducationBlockProps {
     className?: string
@@ -14,6 +15,8 @@ interface EducationBlockProps {
 export const EducationBlock = memo((props: EducationBlockProps) => {
     const { className } = props
 
+    const { t } = useTranslation()
+
     return (
         <Element
             name={'education'}
@@ -21,7 +24,7 @@ export const EducationBlock = memo((props: EducationBlockProps) => {
         >
             <VStack gap="48" align="center" max>
                 <HStack justify="center" gap="16" max>
-                    <Text title="Обучение" tag="h2" weight="medium" />
+                    <Text title={t('Обучение')} tag="h2" weight="medium" />
                     <Text
                         className={styles.hashtag}
                         title="#"

@@ -5,6 +5,7 @@ import { Text } from '@/shared/ui/Text'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { HStack, VStack } from '@/shared/ui/Stack'
 import { SteckCardType } from '../../model/types/SteckCardType'
+import { useTranslation } from 'react-i18next'
 
 interface SteckCardProps {
     className?: string
@@ -24,17 +25,18 @@ export const SteckCard = memo((props: SteckCardProps) => {
         onCollapsed(id)
     }
 
+    const { t } = useTranslation()
+
     if (!collapsed) {
         return (
-            <Button
-                theme={ButtonTheme.CLEAR}
-                onClick={() => onCollapsedHalper(id)}
-                className={classNames(styles.SteckCard, {}, [className])}
-            >
-                <HStack justify="start">
-                    <Text title={name} tag="h3" weight="ligth" />
-                </HStack>
-            </Button>
+            <VStack className={classNames(styles.SteckCard, {}, [className])}>
+                <Button
+                    theme={ButtonTheme.CLEAR}
+                    onClick={() => onCollapsedHalper(id)}
+                >
+                    <Text title={t(name)} tag="h3" weight="ligth" btn />
+                </Button>
+            </VStack>
         )
     }
 
@@ -48,14 +50,14 @@ export const SteckCard = memo((props: SteckCardProps) => {
                 theme={ButtonTheme.CLEAR}
                 onClick={() => onCollapsedHalper(-1)}
             >
-                <Text title={name} tag="h3" weight="ligth" />
+                <Text title={t(name)} tag="h3" weight="ligth" btn />
             </Button>
             <VStack gap="16" className={styles.description}>
                 {description.map((text) => (
                     <HStack gap="24" key={text}>
                         <Text text="•" SizeTextType="textMedium" />
                         <Text
-                            text={text}
+                            text={t(text)}
                             weight="ligth"
                             SizeTextType="textMedium"
                         />

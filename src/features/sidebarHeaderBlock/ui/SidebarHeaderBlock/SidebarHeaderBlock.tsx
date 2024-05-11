@@ -6,11 +6,14 @@ import { Text } from '@/shared/ui/Text'
 import { Link } from 'react-scroll'
 import { PreviewType } from '@/shared/types/PreviewType'
 import { Icon } from '@/shared/ui/Icon'
-import darkTheme from '@/shared/assets/svg/darkTheme.svg'
+import theme from '@/shared/assets/svg/theme.svg'
 import { Button, ButtonTheme } from '@/shared/ui/Button'
 import Menu from '@/shared/assets/svg/menu.svg'
 import { useTheme } from '@/shared/hooks/useTheme'
 import { Hr } from '@/shared/ui/Hr'
+import Logo from '@/shared/assets/svg/logo.svg'
+import { useTranslation } from 'react-i18next'
+import { LangSwitcher } from '@/features/langSwitcher'
 
 interface SidebarHeaderBlockProps {
     className?: string
@@ -29,6 +32,8 @@ export const SidebarHeaderBlock = memo((props: SidebarHeaderBlockProps) => {
         onCallapsed()
     }, [toggleTheme, onCallapsed])
 
+    const { t } = useTranslation()
+
     if (!collapsed) {
         return (
             <>
@@ -39,58 +44,59 @@ export const SidebarHeaderBlock = memo((props: SidebarHeaderBlockProps) => {
                         className,
                     ])}
                 >
-                    <VStack align="center" className={styles.linkBlock}>
-                        <Hr max />
-                        {preview.map((el) => (
-                            <Link
-                                key={el.href}
-                                activeClass="active"
-                                to={el.href}
-                                spy={true}
-                                smooth={true}
-                                duration={700}
-                                className={styles.link}
-                            >
-                                <Text
-                                    title={el.text}
-                                    tag="h2"
-                                    weight="ligth"
-                                    className={styles.text}
-                                    aling="center"
-                                />
-                                <Hr max />
-                            </Link>
-                        ))}
+                    <VStack
+                        align="center"
+                        gap="32"
+                        className={styles.linkBlock}
+                    >
+                        <VStack max>
+                            <Hr max white />
+                            {preview.map((el) => (
+                                <Link
+                                    key={el.href}
+                                    activeClass="active"
+                                    to={el.href}
+                                    spy={true}
+                                    smooth={true}
+                                    duration={700}
+                                    className={styles.link}
+                                >
+                                    <Text
+                                        title={t(el.text)}
+                                        tag="h2"
+                                        weight="ligth"
+                                        className={styles.text}
+                                        aling="center"
+                                    />
+                                    <Hr max white />
+                                </Link>
+                            ))}
+                        </VStack>
                         <HStack>
-                            <Button
-                                onClick={toggleThemeHalper}
-                                className={styles.text}
-                            >
-                                <Icon Svg={darkTheme} />
+                            <Button onClick={toggleThemeHalper}>
+                                <Icon Svg={theme} className={styles.icon} />
                             </Button>
-                            <Button
-                                onClick={toggleThemeHalper}
-                                className={styles.text}
-                            >
-                                <Text
-                                    title={'РУС'}
-                                    tag="h2"
-                                    weight="ligth"
-                                    aling="center"
-                                />
-                            </Button>
+                            <LangSwitcher />
                         </HStack>
                     </VStack>
-                    <Button
-                        theme={ButtonTheme.CLEAR}
-                        onClick={onCallapsed}
-                        className={styles.btn}
-                    >
-                        <Icon Svg={Menu} />
-                    </Button>
+                    <HStack className={styles.block} justify="end">
+                        <Button theme={ButtonTheme.CLEAR} onClick={onCallapsed}>
+                            <Icon Svg={Menu} />
+                        </Button>
+                    </HStack>
                 </HStack>
             </>
         )
     }
-    return null
+    return (
+        <HStack className={styles.block} justify="between">
+            <HStack>
+                <Icon Svg={Logo} />
+                <Text title="edotov" tag="h4" weight="ligth" white />
+            </HStack>
+            <Button theme={ButtonTheme.CLEAR} onClick={onCallapsed}>
+                <Icon Svg={Menu} />
+            </Button>
+        </HStack>
+    )
 })

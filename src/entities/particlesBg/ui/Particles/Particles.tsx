@@ -33,7 +33,7 @@ export const ParticlesBg = memo(() => {
                 fpsLimit: 160,
                 particles: {
                     color: {
-                        value: 'rgb(154, 92, 255)',
+                        value: 'rgb(112, 22, 255)',
                     },
                     links: {
                         color: 'rgb(154, 92, 255)',

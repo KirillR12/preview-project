@@ -1,0 +1,13 @@
+.Icon {
+    fill: var(--text-color-white);
+        
+        @media screen and (max-width: 1024px ) {
+            width: 16px;
+            height: 16px;
+        }
+
+    &:hover {
+        transition: all 0.2s;
+        fill: var(--hover-color);  
+    }
+}

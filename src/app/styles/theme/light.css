@@ -5,4 +5,8 @@
     --text-color-inverted: #fff;
     --text-color-white: #fff;
     --shadow-color: rgba(0, 0, 0, 0.5);
+
+    --hover-color: rgb(112, 22, 255);
+
+    --granules-color: rgb(179, 131, 255);
 }

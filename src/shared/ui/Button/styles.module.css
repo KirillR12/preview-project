@@ -3,29 +3,24 @@
 
     cursor: pointer;
 
-    @media screen (max-width: 1024px) {
+    &:hover {
+        transition: all 0.2s;
+        color: var(--hover-color);
+    }
+
+    @media screen {
         &:hover {
             color: none;
         }
     }
-    
-    &:hover {
-        transition: all 0.2s;
-        color: rgb(154, 92, 255)
-    }
 }
 
 .clear {
-    padding: 10px 0;
+    padding: 0 10px;
     border: none;
 
     background: none;
     outline: none;
-
-    &:hover {
-        transition: all 0.2s;
-        color: rgb(154, 92, 255)
-    }
 }
 
 .outline {

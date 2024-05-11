@@ -9,14 +9,17 @@ interface HrProps {
     max?: boolean
     hrVertically?: boolean
     maxInverted?: boolean
+    white?: boolean
 }
 
 export const Hr = memo((props: HrProps) => {
-    const { className, width, height, max, hrVertically, maxInverted } = props
+    const { className, width, height, max, hrVertically, maxInverted, white } =
+        props
 
     const mods = {
         [styles.max]: max,
         [styles.maxInverted]: maxInverted,
+        [styles.white]: white,
     }
 
     if (hrVertically) {

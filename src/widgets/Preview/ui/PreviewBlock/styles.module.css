@@ -1,15 +1,15 @@
 .PreviewBlock {
-background-color: rgba(0, 0, 0);
-color: #FFF;
-position: relative;
-z-index: var(--z-index-block);
+    position: relative;
+    background-color: rgba(0, 0, 0);
+    color: var(--text-color-white);
+    z-index: var(--z-index-block);
 }
 
 .img {
+    object-fit: cover;
     position: relative;
     height: 100vh;
     width: 100vw;
-    object-fit: cover;
     opacity: 0.5;
 }
 
@@ -17,19 +17,16 @@ z-index: var(--z-index-block);
     position: absolute;
     padding: 0 230px;
     top: 40px;
-    display: flex;
-    justify-content: center;
 
     @media (max-width: 1440px) {
         left: 0;
         top: 0;
-        padding: 5% 10%;
+        padding: 5% 5%;
     }
 }
 
 .SidebarHeaderBlock {
     position: absolute;
-    z-index: 999;
     top: 0;
     left: 0;
 }
@@ -43,22 +40,10 @@ z-index: var(--z-index-block);
     @media (max-width: 1440px) {
         left: 0;
         top: 30vh;
-        padding: 5% 10%;
+        padding: 5%;
     }
 
     @media (max-width: 430px) {
-        left: 0;
-        top: 0;
-        margin-top: 75%;
-        margin-left: 5%;
-        padding: 0;
+        padding: 5%;
     }
-}
-
-.btn {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin-top: 5%;
-    margin-left: 90%;
 }

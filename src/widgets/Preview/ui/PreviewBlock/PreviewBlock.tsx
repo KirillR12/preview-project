@@ -7,9 +7,6 @@ import { HeaderBlock } from '@/features/headerBlock'
 import { headerBlockData } from '../../model/data/data'
 import { useMediaQuery } from 'react-responsive'
 import { SidebarHeaderBlock } from '@/features/sidebarHeaderBlock'
-import { Button } from '@/shared/ui/Button'
-import { Icon } from '@/shared/ui/Icon'
-import Menu from '@/shared/assets/svg/menu.svg'
 import { HStack } from '@/shared/ui/Stack'
 
 interface PreviewBlockProps {
@@ -19,7 +16,7 @@ interface PreviewBlockProps {
 export const PreviewBlock = memo((props: PreviewBlockProps) => {
     const { className } = props
 
-    const isModule = useMediaQuery({ query: '(min-width: 900px)' })
+    const isModuleSize = useMediaQuery({ query: '(min-width: 1020px)' })
 
     const [collapsed, setCollapsed] = useState(true)
 
@@ -28,10 +25,10 @@ export const PreviewBlock = memo((props: PreviewBlockProps) => {
     }, [])
 
     return (
-        <div className={classNames(styles.PreviewBlock, '', [className])}>
+        <div className={classNames(styles.PreviewBlock, {}, [className])}>
             <img className={styles.img} src={img} />
-            {isModule ? (
-                <HStack className={styles.HeaderBlock} justify="center" max>
+            {isModuleSize ? (
+                <HStack className={styles.HeaderBlock} max justify="center">
                     <HeaderBlock preview={headerBlockData} />
                 </HStack>
             ) : (
@@ -42,11 +39,6 @@ export const PreviewBlock = memo((props: PreviewBlockProps) => {
                     onCallapsed={collapsedBtnFunc}
                 />
             )}
-            {!isModule ? (
-                <Button onClick={collapsedBtnFunc} className={styles.btn}>
-                    <Icon Svg={Menu} />
-                </Button>
-            ) : null}
             <HStack max className={styles.AboutMeBlock} justify="center">
                 <AboutMeBlock />
             </HStack>

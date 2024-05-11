@@ -89,11 +89,33 @@ font-size: 24px;
 }
 
 p {
-    @media screen and (max-width: 1024px ) {
+    @media screen and (max-width: 1024px) {
         font-size: 12px;
     }
 }
 
 .white {
 color: var(--text-color-white)
+}
+
+.btn {
+    &:hover {
+        transition: 0.2s;
+        color: var(--hover-color);
+    }
+
+    @media screen {
+        color: none;
+    }
+}
+
+.hashtag {
+    transition: all 0.2s;
+    color: transparent;
+    user-select: none; 
+
+    &:hover {
+       color: red;
+       display: none;
+    }
 }
