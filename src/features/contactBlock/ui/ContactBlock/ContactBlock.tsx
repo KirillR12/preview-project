@@ -12,7 +12,7 @@ interface ContactBlockProps {
     className?: string
 }
 
-export const ContactBlock = memo((props: ContactBlockProps) => {
+const ContactBlock = memo((props: ContactBlockProps) => {
     const { className } = props
 
     const { t } = useTranslation()
@@ -52,3 +52,5 @@ export const ContactBlock = memo((props: ContactBlockProps) => {
         </Element>
     )
 })
+
+export default ContactBlock

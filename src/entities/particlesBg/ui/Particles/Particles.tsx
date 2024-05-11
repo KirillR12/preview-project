@@ -6,7 +6,7 @@ import Particles from 'react-tsparticles'
 import type { Container, Engine } from 'tsparticles-engine'
 import { loadSlim } from 'tsparticles-slim'
 
-export const ParticlesBg = memo(() => {
+const ParticlesBg = memo(() => {
     const particlesInit = useCallback(async (engine: Engine) => {
         console.log(engine)
         await loadSlim(engine)
@@ -64,3 +64,5 @@ export const ParticlesBg = memo(() => {
         />
     )
 })
+
+export default ParticlesBg

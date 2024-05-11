@@ -1,1 +1,1 @@
-export { SteckBlock } from './ui/SteckBlock/SteckBlock'
+export { SteckBlockAsync as SteckBlock } from './ui/SteckBlock/SteckBlockAsync'

@@ -104,8 +104,10 @@ color: var(--text-color-white)
         color: var(--hover-color);
     }
 
-    @media screen {
-        color: none;
+    @media screen and (max-width: 1280px) {
+        &:hover {
+        color: var(--text-color);
+        }
     }
 }
 

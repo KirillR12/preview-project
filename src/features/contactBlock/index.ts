@@ -1,1 +1,1 @@
-export { ContactBlock } from './ui/ContactBlock/ContactBlock'
+export { ContactBlockAsync as ContactBlock } from './ui/ContactBlock/ContactBlockAsync'

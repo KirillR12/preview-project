@@ -13,7 +13,7 @@ interface SteckBlockProps {
     className?: string
 }
 
-export const SteckBlock = memo((props: SteckBlockProps) => {
+const SteckBlock = memo((props: SteckBlockProps) => {
     const { className } = props
 
     const [collapsed, setCollapsed] = useState<number>()
@@ -58,3 +58,5 @@ export const SteckBlock = memo((props: SteckBlockProps) => {
         </Element>
     )
 })
+
+export default SteckBlock

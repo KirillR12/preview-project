@@ -5,7 +5,7 @@ export const contactsData = [
     },
     {
         name: 'WhatApp',
-        link: 'https://wa.clck.bar/79018073965',
+        link: 'https://wa.me/79018073965',
     },
     {
         name: 'LinkedIn',

@@ -50,7 +50,6 @@ export const SidebarHeaderBlock = memo((props: SidebarHeaderBlockProps) => {
                         className={styles.linkBlock}
                     >
                         <VStack max>
-                            <Hr max white />
                             {preview.map((el) => (
                                 <Link
                                     key={el.href}
@@ -81,7 +80,7 @@ export const SidebarHeaderBlock = memo((props: SidebarHeaderBlockProps) => {
                     </VStack>
                     <HStack className={styles.block} justify="end">
                         <Button theme={ButtonTheme.CLEAR} onClick={onCallapsed}>
-                            <Icon Svg={Menu} />
+                            <Icon Svg={Menu} className={styles.icon} />
                         </Button>
                     </HStack>
                 </HStack>
@@ -91,11 +90,11 @@ export const SidebarHeaderBlock = memo((props: SidebarHeaderBlockProps) => {
     return (
         <HStack className={styles.block} justify="between">
             <HStack>
-                <Icon Svg={Logo} />
-                <Text title="edotov" tag="h4" weight="ligth" white />
+                <Icon Svg={Logo} className={styles.icon} />
+                <Text title="edotov" tag="h3" weight="ligth" white />
             </HStack>
             <Button theme={ButtonTheme.CLEAR} onClick={onCallapsed}>
-                <Icon Svg={Menu} />
+                <Icon Svg={Menu} className={styles.icon} />
             </Button>
         </HStack>
     )

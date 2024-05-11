@@ -9,7 +9,7 @@ interface AboutMeBlockProps {
     className?: string
 }
 
-export const AboutMeBlock = memo((props: AboutMeBlockProps) => {
+const AboutMeBlock = memo((props: AboutMeBlockProps) => {
     const { className } = props
 
     const { t } = useTranslation()
@@ -40,3 +40,5 @@ export const AboutMeBlock = memo((props: AboutMeBlockProps) => {
         </VStack>
     )
 })
+
+export default AboutMeBlock

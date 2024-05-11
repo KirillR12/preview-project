@@ -12,7 +12,7 @@ interface ProjectBlockProps {
     className?: string
 }
 
-export const ProjectBlock = memo((props: ProjectBlockProps) => {
+const ProjectBlock = memo((props: ProjectBlockProps) => {
     const { className } = props
 
     const { t } = useTranslation()
@@ -43,3 +43,5 @@ export const ProjectBlock = memo((props: ProjectBlockProps) => {
         </Element>
     )
 })
+
+export default ProjectBlock

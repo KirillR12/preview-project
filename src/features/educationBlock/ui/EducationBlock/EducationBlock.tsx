@@ -12,7 +12,7 @@ interface EducationBlockProps {
     className?: string
 }
 
-export const EducationBlock = memo((props: EducationBlockProps) => {
+const EducationBlock = memo((props: EducationBlockProps) => {
     const { className } = props
 
     const { t } = useTranslation()
@@ -37,3 +37,5 @@ export const EducationBlock = memo((props: EducationBlockProps) => {
         </Element>
     )
 })
+
+export default EducationBlock

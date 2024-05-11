@@ -1,1 +1,1 @@
-export { ParticlesBg } from './ui/Particles/Particles'
+export { ParticlesAsync as ParticlesBg } from './ui/Particles/ParticlesAsync'

@@ -1,1 +1,1 @@
-export { AboutMeBlock } from './ui/AboutMeBlock/AboutMeBlock'
+export { AboutMeBlockAsync as AboutMeBlock } from './ui/AboutMeBlock/AboutMeBlockAsync'

@@ -1,1 +1,1 @@
-export { ProjectBlock } from './ui/ProjectBlock/ProjectBlock'
+export { ProjectBlockAsync as ProjectBlock } from './ui/ProjectBlock/ProjectBlockAsync'

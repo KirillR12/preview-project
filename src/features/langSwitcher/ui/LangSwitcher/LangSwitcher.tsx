@@ -18,7 +18,7 @@ export const LangSwitcher = memo(() => {
         <>
             <Button theme={ButtonTheme.CLEAR} onClick={toggle}>
                 <Text
-                    title={t('end')}
+                    title={t('eng')}
                     tag={isModuleSize ? 'h4' : 'h3'}
                     className={styles.text}
                     weight="ligth"
