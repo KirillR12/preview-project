@@ -45,6 +45,7 @@ export const SteckCard = memo((props: SteckCardProps) => {
             gap="16"
             align="start"
             className={classNames(styles.SteckCard, {}, [className])}
+            max
         >
             <Button
                 theme={ButtonTheme.CLEAR}
@@ -52,7 +53,7 @@ export const SteckCard = memo((props: SteckCardProps) => {
             >
                 <Text title={t(name)} tag="h3" weight="ligth" btn />
             </Button>
-            <VStack gap="16" className={styles.description}>
+            <VStack gap="16" className={styles.description} max>
                 {description.map((text) => (
                     <HStack gap="24" key={text}>
                         <Text text="•" SizeTextType="textMedium" />

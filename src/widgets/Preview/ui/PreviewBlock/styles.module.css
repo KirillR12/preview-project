@@ -42,8 +42,4 @@
         top: 30vh;
         padding: 5%;
     }
-
-    @media (max-width: 430px) {
-        padding: 5%;
-    }
 }

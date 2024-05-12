@@ -38,7 +38,7 @@ const ContactBlock = memo((props: ContactBlockProps) => {
             className={classNames(styles.ContactBlock, {}, [className])}
         >
             <VStack gap="48" align="center">
-                <HStack className={styles.title} justify="center" gap="16" max>
+                <HStack justify="center" gap="16" max>
                     <Text title={t('Контакты')} tag="h2" weight="medium" />
                     <Text
                         className={styles.hashtag}

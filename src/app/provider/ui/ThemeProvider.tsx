@@ -1,3 +1,4 @@
+import { ThemeKey } from '@/shared/constant/localStorage'
 import { ThemeContext } from '@/shared/contexts/ThemeContext'
 import { ThemeType } from '@/shared/types/ThemeType'
 import { ReactNode, memo, useMemo, useState } from 'react'
@@ -9,7 +10,10 @@ interface ThemeProviderProps {
 export const ThemeProvider = memo((props: ThemeProviderProps) => {
     const { children } = props
 
-    const [theme, setTheme] = useState<ThemeType>('theme_dark')
+    const themeLS = localStorage.getItem(ThemeKey as ThemeType)
+    const themeDefault = themeLS ? themeLS : 'theme_dark'
+
+    const [theme, setTheme] = useState(themeDefault as ThemeType)
 
     const defaultProps = useMemo(
         () => ({

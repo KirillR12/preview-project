@@ -2,8 +2,8 @@
     padding: 48px 0; 
     box-shadow: var(--shadow-color) 0px 0 15px 0px;
     background: var(--bg-color-inverted);
+    z-index: var(--z-index-block);
     position: relative;
-    z-index: 999;
     width: 100%;
 
     @media (max-width: 1400px) {

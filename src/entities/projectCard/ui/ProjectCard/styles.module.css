@@ -1,6 +1,6 @@
 .ProjectCard {
     position: relative;
-    z-index: 999;
+    z-index: var(--z-index-text);
     padding: 50px;
     object-fit: cover;
 

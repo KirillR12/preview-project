@@ -1,4 +1,6 @@
-export const contactsData = [
+import { ContactsCardType } from '../types/ContactsCardType'
+
+export const contactsData: ContactsCardType[] = [
     {
         name: 'Telegram',
         link: 'https://t.me/llfedotov',

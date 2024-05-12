@@ -32,7 +32,7 @@ const AboutMeBlock = memo((props: AboutMeBlockProps) => {
                 className={styles.text}
             />
             <Text
-                title={t('с 2-х летнем опытом.')}
+                title={t('с 2-х летним опытом.')}
                 tag="h2"
                 weight="ligth"
                 className={styles.text}

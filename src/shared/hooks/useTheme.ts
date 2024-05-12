@@ -1,6 +1,7 @@
 import { useCallback, useContext } from 'react'
 import { ThemeContext } from '../contexts/ThemeContext'
 import { ThemeType } from '../types/ThemeType'
+import { ThemeKey } from '@/shared/constant/localStorage'
 
 export interface useThemeResulf {
     theme: ThemeType
@@ -23,6 +24,7 @@ export function useTheme(): useThemeResulf {
                 themeHelper = 'theme_dark'
                 break
         }
+        localStorage.setItem(ThemeKey, themeHelper)
         setTheme?.(themeHelper)
     }, [theme, setTheme])
 

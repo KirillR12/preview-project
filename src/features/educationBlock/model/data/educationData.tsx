@@ -1,4 +1,6 @@
-export const educationData = [
+import { EducationCardType } from '@/entities/swiperCard'
+
+export const educationData: EducationCardType[] = [
     {
         img: 'https://i.ytimg.com/vi/S3ZGcFDp4RM/maxresdefault.jpg',
         link: 'https://ulbitv.ru/frontend',

@@ -1,12 +1,10 @@
 @import "reset";
-@import "global";
 @import "./theme/dark.css";
 @import "./theme/light.css";
 
 .app {
     display: flex;
     min-height: 100vh;
-    font-family: 'Ubuntu';
     overflow-x: hidden;
     background-color: var(--bg-color);
 

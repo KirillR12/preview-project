@@ -5,7 +5,7 @@
             width: 16px;
             height: 16px;
         }
-
+        
     &:hover {
         transition: all 0.2s;
         fill: var(--hover-color);  

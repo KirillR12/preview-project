@@ -1,4 +1,6 @@
-export const projectData = [
+import { ProjectCardType } from '@/entities/projectCard'
+
+export const projectData: ProjectCardType[] = [
     {
         name: 'Список задач',
         img: 'https://sun9-36.userapi.com/impg/Jw9QxnGpDd1AGPZkUWRAXsD2hmqasUVe5abzpQ/nA7uj87PBk4.jpg?size=1560x740&quality=95&sign=b4ed8c21cf0aaf3fa141312b8ad47362&type=album',

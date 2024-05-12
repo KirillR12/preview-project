@@ -15,16 +15,14 @@ export const LangSwitcher = memo(() => {
     const isModuleSize = useMediaQuery({ query: '(min-width: 1020px)' })
 
     return (
-        <>
-            <Button theme={ButtonTheme.CLEAR} onClick={toggle}>
-                <Text
-                    title={t('eng')}
-                    tag={isModuleSize ? 'h4' : 'h3'}
-                    className={styles.text}
-                    weight="ligth"
-                    btn
-                />
-            </Button>
-        </>
+        <Button theme={ButtonTheme.CLEAR} onClick={toggle}>
+            <Text
+                title={t('eng')}
+                tag={isModuleSize ? 'h4' : 'h3'}
+                className={styles.text}
+                weight="ligth"
+                btn
+            />
+        </Button>
     )
 })
