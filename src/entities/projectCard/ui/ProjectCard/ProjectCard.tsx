@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import styles from './styles.module.css'
-import { memo } from 'react'
+import { MutableRefObject, memo } from 'react'
 import { HStack, VStack } from '@/shared/ui/Stack'
 import { ProjectCardType } from '../../model/types/ProjectCardType'
 import { Text } from '@/shared/ui/Text'
@@ -11,10 +11,11 @@ interface ProjectCardProps {
     className?: string
     end?: boolean
     card: ProjectCardType
+    ref?: MutableRefObject<HTMLDivElement>
 }
 
 export const ProjectCard = memo((props: ProjectCardProps) => {
-    const { className, end, card } = props
+    const { className, end, card, ref } = props
 
     const { img, name, gitLink } = card
 
@@ -26,6 +27,7 @@ export const ProjectCard = memo((props: ProjectCardProps) => {
                 justify="start"
                 max
                 className={classNames(styles.ProjectCard, {}, [className])}
+                ref={ref}
             >
                 <div className={styles.containerImg}>
                     <img src={img} className={styles.img} />

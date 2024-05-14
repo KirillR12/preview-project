@@ -1,10 +1,10 @@
 import { memo } from 'react'
 import styles from './styles.module.css'
 import classNames from 'classnames'
+import { TitleTag } from '@/shared/types/TagType'
+import { WeightType } from '@/shared/types/WeightType'
 
-type TitleTag = 'h1' | 'h2' | 'h3' | 'h4'
 type SizeTextType = 'textBig' | 'textMedium' | 'textSmall'
-type WeightType = 'ligth' | 'medium' | 'bolt'
 type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4'
 type TextAlign = 'start' | 'center' | 'end'
 

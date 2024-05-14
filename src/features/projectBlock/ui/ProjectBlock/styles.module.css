@@ -31,3 +31,27 @@
        display: none;
     }
 }
+
+.ProjectCardEnd {
+left: 1000px;
+
+@media screen and (max-width: 1280px) {
+    left: 800px;
+    display: block;
+ }
+}
+
+.ProjectCard {
+right: 1000px;
+
+@media screen and (max-width: 1280px) {
+    right: 800px;
+    display: block;
+}
+}
+
+.fine {
+    transition: left 0.5s;
+    left: 0;
+    right: 0;
+}

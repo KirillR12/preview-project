@@ -3,6 +3,7 @@
     z-index: var(--z-index-text);
     padding: 50px;
     object-fit: cover;
+    left: -1000px;
 
     @media (max-width: 1024px) {
         padding: 28px 0;

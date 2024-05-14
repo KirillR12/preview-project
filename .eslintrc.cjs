@@ -4,7 +4,6 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:i18next/recommended',
         'plugin:react-hooks/recommended',
         'prettier',
     ],
@@ -15,9 +14,6 @@ module.exports = {
                 '**/src/**/*.test.{ts,tsx}',
                 '**/src/**/*.stories.{ts,tsx}',
             ],
-            rules: {
-                'i18next/no-literal-string': 'off',
-            },
         },
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs'],
