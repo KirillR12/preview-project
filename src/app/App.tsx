@@ -1,6 +1,6 @@
-import { MainPage } from '@/pages/MainPage'
-import './styles/index.css'
 import classNames from 'classnames'
+import './styles/index.css'
+import { MainPage } from '@/pages/MainPage'
 import { useTheme } from '@/shared/hooks/useTheme'
 
 export function App() {

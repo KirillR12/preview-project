@@ -1,4 +1,4 @@
-import { MutableRefObject, memo, useCallback, useRef, useState } from 'react'
+import { memo } from 'react'
 import { Text } from '@/shared/ui/Text'
 import { HStack, VStack } from '@/shared/ui/Stack'
 import { ProjectCard } from '@/entities/projectCard'
@@ -7,7 +7,6 @@ import classNames from 'classnames'
 import { Element } from 'react-scroll'
 import { projectData } from '../../model/data/projectData'
 import { useTranslation } from 'react-i18next'
-import { useInfiniteScroll } from '@/shared/hooks/useInfiniteScroll'
 
 interface ProjectBlockProps {
     className?: string
@@ -17,21 +16,6 @@ const ProjectBlock = memo((props: ProjectBlockProps) => {
     const { className } = props
 
     const { t } = useTranslation()
-
-    const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>
-    const triggerRef = useRef() as MutableRefObject<HTMLDivElement>
-
-    const [obviously, setObviously] = useState(false)
-
-    const targetFunc = useCallback(() => {
-        setObviously(true)
-    }, [])
-
-    useInfiniteScroll({
-        triggerRef,
-        wrapperRef,
-        callback: () => targetFunc(),
-    })
 
     return (
         <Element
@@ -53,7 +37,7 @@ const ProjectBlock = memo((props: ProjectBlockProps) => {
                         <ProjectCard
                             card={el}
                             className={classNames(styles.ProjectCardEnd, {
-                                [styles.fine]: obviously,
+                                [styles.fine]: true,
                             })}
                             end
                         />
@@ -61,7 +45,7 @@ const ProjectBlock = memo((props: ProjectBlockProps) => {
                         <ProjectCard
                             card={el}
                             className={classNames(styles.ProjectCard, {
-                                [styles.fine]: obviously,
+                                [styles.fine]: true,
                             })}
                         />
                     )

@@ -3,21 +3,13 @@ import { memo } from 'react'
 import { useCallback } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Particles from 'react-tsparticles'
-import type { Container, Engine } from 'tsparticles-engine'
+import type { Engine } from 'tsparticles-engine'
 import { loadSlim } from 'tsparticles-slim'
 
 const ParticlesBg = memo(() => {
     const particlesInit = useCallback(async (engine: Engine) => {
-        console.log(engine)
         await loadSlim(engine)
     }, [])
-
-    const particlesLoaded = useCallback(
-        async (container: Container | undefined) => {
-            await console.log(container)
-        },
-        []
-    )
 
     const isModule = useMediaQuery({ query: '(min-width: 900px)' })
 
@@ -28,7 +20,6 @@ const ParticlesBg = memo(() => {
             className={styles.particles}
             id="tsparticles"
             init={particlesInit}
-            loaded={particlesLoaded}
             options={{
                 fpsLimit: 160,
                 particles: {
