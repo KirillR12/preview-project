@@ -128,4 +128,11 @@ export const steckData = [
             'Promise, event loop.',
         ],
     },
+    {
+        name: 'Алгоритмы',
+        description: [
+            'Решаю задачи на Code Wars.',
+            'Прохожу курс по алгоритмам от Яндекса.',
+        ],
+    },
 ]

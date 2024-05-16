@@ -3,14 +3,9 @@
     z-index: var(--z-index-text);
     padding: 50px;
     object-fit: cover;
-    left: -1000px;
-
-    @media (max-width: 1024px) {
-        padding: 28px 0;
-    }
-
-    @media (max-width: 576px ) {
-        padding: 0px;
+    
+    @media (max-width: 1024px ) {
+        padding: 0;
         display: flex;
         justify-content: center;
     }

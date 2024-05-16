@@ -42,7 +42,7 @@ const SteckBlock = memo((props: SteckBlockProps) => {
                 <VStack gap="16" className={styles.container} max>
                     <Hr max />
                     {steckData.map((el, i) => (
-                        <>
+                        <VStack key={el.name} max>
                             <SteckCard
                                 collapsed={collapsed === i}
                                 onCollapsed={onCollapsed}
@@ -51,7 +51,7 @@ const SteckBlock = memo((props: SteckBlockProps) => {
                                 isOpen
                             />
                             <Hr max />
-                        </>
+                        </VStack>
                     ))}
                 </VStack>
             </VStack>

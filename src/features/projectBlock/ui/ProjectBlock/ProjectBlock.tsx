@@ -34,20 +34,9 @@ const ProjectBlock = memo((props: ProjectBlockProps) => {
                 </HStack>
                 {projectData.map((el, i) =>
                     i % 2 ? (
-                        <ProjectCard
-                            card={el}
-                            className={classNames(styles.ProjectCardEnd, {
-                                [styles.fine]: true,
-                            })}
-                            end
-                        />
+                        <ProjectCard key={el.img} card={el} end />
                     ) : (
-                        <ProjectCard
-                            card={el}
-                            className={classNames(styles.ProjectCard, {
-                                [styles.fine]: true,
-                            })}
-                        />
+                        <ProjectCard key={el.img} card={el} />
                     )
                 )}
             </VStack>
