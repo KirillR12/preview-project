@@ -10,4 +10,10 @@
         transition: all 0.2s;
         fill: var(--hover-color);  
     }
+
+    @media screen and (max-width: 1280px){
+        &:hover {
+            fill: var(--text-color-white);
+        }
+    }
 }

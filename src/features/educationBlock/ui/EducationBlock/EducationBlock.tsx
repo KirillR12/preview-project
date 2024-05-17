@@ -24,7 +24,12 @@ const EducationBlock = memo((props: EducationBlockProps) => {
         >
             <VStack gap="48" align="center" max>
                 <HStack justify="center" gap="16" max>
-                    <Text title={t('Обучение')} tag="h2" weight="medium" />
+                    <Text
+                        title={t('Обучение')}
+                        tag="h2"
+                        weight="medium"
+                        theme="outline"
+                    />
                     <Text
                         className={styles.hashtag}
                         title="#"

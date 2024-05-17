@@ -2,7 +2,15 @@
 max-width: 1200px;
 }
 
-.text {
-    text-transform: uppercase;
-    color: var(--text-color-white);
+.linkBtn {
+padding: 0 10px;
+border: none;
+background: none;
+outline: none;
+color: var(--text-color-white);
+
+&:hover {
+    transition: all 0.2s;
+color: var(--hover-color);
+}
 }

@@ -7,6 +7,7 @@ import { WeightType } from '@/shared/types/WeightType'
 type SizeTextType = 'textBig' | 'textMedium' | 'textSmall'
 type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4'
 type TextAlign = 'start' | 'center' | 'end'
+type TextTheme = 'white' | 'outline'
 
 interface TextProps {
     className?: string
@@ -16,9 +17,7 @@ interface TextProps {
     SizeTextType?: SizeTextType
     tag?: TitleTag
     aling?: TextAlign
-    white?: boolean
-    btn?: boolean
-    hashtag?: boolean
+    theme?: TextTheme
 }
 
 const mapSizeToHeaderTag: Record<TitleTag, HeaderTagType> = {
@@ -37,28 +36,21 @@ export const Text = memo((props: TextProps) => {
         SizeTextType = 'textSmall',
         aling = 'start',
         tag = 'h1',
-        white,
-        btn,
-        hashtag,
+        theme = '',
     } = props
 
     const HeaderTag = mapSizeToHeaderTag[tag]
 
-    const additionTitleArr = [styles[weight], styles[aling]]
+    const additionTitleArr = [styles[weight], styles[aling], styles[theme]]
     const additionTextArr = [
         styles[weight],
         styles[SizeTextType],
         styles[aling],
+        styles[theme],
     ]
 
-    const mods = {
-        [styles.white]: white,
-        [styles.btn]: btn,
-        [styles.hashtag]: hashtag,
-    }
-
     return (
-        <div className={classNames(styles.divText, mods, [className])}>
+        <div className={classNames(styles.divText, {}, [className])}>
             {title && (
                 <HeaderTag
                     className={classNames(styles.title, {}, additionTitleArr)}

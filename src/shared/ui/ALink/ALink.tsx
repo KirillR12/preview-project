@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import styles from './styles.module.css'
 import { HTMLAttributeAnchorTarget, ReactNode, memo } from 'react'
 
-type ALinkTheme = 'clear' | 'outline'
+type ALinkTheme = 'clear' | 'outline' | 'clear_outline'
 
 interface ALinkProps {
     className?: string

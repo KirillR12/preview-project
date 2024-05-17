@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import styles from './styles.module.css'
 import { memo } from 'react'
 import { Text } from '@/shared/ui/Text'
-import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { Button } from '@/shared/ui/Button'
 import { HStack, VStack } from '@/shared/ui/Stack'
 import { SteckCardType } from '../../model/types/SteckCardType'
 import { useTranslation } from 'react-i18next'
@@ -31,10 +31,10 @@ export const SteckCard = memo((props: SteckCardProps) => {
         return (
             <VStack className={classNames(styles.SteckCard, {}, [className])}>
                 <Button
-                    theme={ButtonTheme.CLEAR}
+                    theme="clear_outline"
                     onClick={() => onCollapsedHalper(id)}
                 >
-                    <Text title={t(name)} tag="h3" weight="ligth" btn />
+                    <Text title={t(name)} tag="h3" weight="ligth" />
                 </Button>
             </VStack>
         )
@@ -47,20 +47,22 @@ export const SteckCard = memo((props: SteckCardProps) => {
             className={classNames(styles.SteckCard, {}, [className])}
             max
         >
-            <Button
-                theme={ButtonTheme.CLEAR}
-                onClick={() => onCollapsedHalper(-1)}
-            >
-                <Text title={t(name)} tag="h3" weight="ligth" btn />
+            <Button theme="clear_outline" onClick={() => onCollapsedHalper(-1)}>
+                <Text title={t(name)} tag="h3" weight="ligth" />
             </Button>
             <VStack gap="16" className={styles.description} max>
                 {description.map((text) => (
                     <HStack gap="24" key={text}>
-                        <Text text="•" SizeTextType="textMedium" />
+                        <Text
+                            text="•"
+                            SizeTextType="textMedium"
+                            theme="outline"
+                        />
                         <Text
                             text={t(text)}
                             weight="ligth"
                             SizeTextType="textMedium"
+                            theme="outline"
                         />
                     </HStack>
                 ))}

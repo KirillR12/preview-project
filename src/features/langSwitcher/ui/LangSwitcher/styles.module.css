@@ -1,4 +1,8 @@
 .text {
     text-transform: uppercase;
     color: var(--text-color-white);
+
+    &:hover {
+        color: var(--text-color-white)
+    }
 }

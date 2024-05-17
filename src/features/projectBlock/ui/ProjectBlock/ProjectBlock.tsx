@@ -24,7 +24,12 @@ const ProjectBlock = memo((props: ProjectBlockProps) => {
         >
             <VStack gap="48" align="center" max>
                 <HStack className={styles.title} justify="center" gap="16" max>
-                    <Text tag="h2" title={t('Проекты')} weight="medium" />
+                    <Text
+                        tag="h2"
+                        title={t('Проекты')}
+                        weight="medium"
+                        theme="outline"
+                    />
                     <Text
                         className={styles.hashtag}
                         title="#"

@@ -2,19 +2,19 @@ import { PreviewType } from '@/shared/types/PreviewType'
 
 export const headerBlockData: PreviewType[] = [
     {
-        text: 'проекты',
+        text: 'Проекты',
         href: 'project',
     },
     {
-        text: 'навыки',
+        text: 'Навыки',
         href: 'steck',
     },
     {
-        text: 'обучение',
+        text: 'Обучение',
         href: 'education',
     },
     {
-        text: 'контакты',
+        text: 'Контакты',
         href: 'contacts',
     },
 ]

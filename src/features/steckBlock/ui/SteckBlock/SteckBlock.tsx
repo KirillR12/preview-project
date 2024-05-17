@@ -31,7 +31,12 @@ const SteckBlock = memo((props: SteckBlockProps) => {
         >
             <VStack gap="48" max align="center">
                 <HStack className={styles.title} justify="center" gap="16" max>
-                    <Text title={t('Навыки')} tag="h2" weight="medium" />
+                    <Text
+                        title={t('Навыки')}
+                        tag="h2"
+                        weight="medium"
+                        theme="outline"
+                    />
                     <Text
                         className={styles.hashtag}
                         title="#"

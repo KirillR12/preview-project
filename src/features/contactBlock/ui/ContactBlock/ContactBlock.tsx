@@ -24,9 +24,9 @@ const ContactBlock = memo((props: ContactBlockProps) => {
                     key={el.link}
                     target="_blank"
                     href={el.link}
-                    theme="clear"
+                    theme="clear_outline"
                 >
-                    <Text title={el.name} tag="h3" aling="center" btn />
+                    <Text title={el.name} tag="h3" aling="center" />
                 </ALink>
             ))}
         </HStack>
@@ -39,7 +39,12 @@ const ContactBlock = memo((props: ContactBlockProps) => {
         >
             <VStack gap="48" align="center">
                 <HStack justify="center" gap="16" max>
-                    <Text title={t('Контакты')} tag="h2" weight="medium" />
+                    <Text
+                        title={t('Контакты')}
+                        tag="h2"
+                        weight="medium"
+                        theme="outline"
+                    />
                     <Text
                         className={styles.hashtag}
                         title="#"

@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 import { PreviewType } from '@/shared/types/PreviewType'
 import { Icon } from '@/shared/ui/Icon'
 import theme from '@/shared/assets/svg/theme.svg'
-import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { Button } from '@/shared/ui/Button'
 import Menu from '@/shared/assets/svg/menu.svg'
 import { useTheme } from '@/shared/hooks/useTheme'
 import { Hr } from '@/shared/ui/Hr'
@@ -49,26 +49,27 @@ export const SidebarHeaderBlock = memo((props: SidebarHeaderBlockProps) => {
                         gap="32"
                         className={styles.linkBlock}
                     >
-                        <VStack max>
+                        <VStack gap="32" max>
                             {preview.map((el) => (
-                                <Link
-                                    key={el.href}
-                                    activeClass="active"
-                                    to={el.href}
-                                    spy={true}
-                                    smooth={true}
-                                    duration={700}
-                                    className={styles.link}
-                                >
-                                    <Text
-                                        title={t(el.text)}
-                                        tag="h2"
-                                        weight="ligth"
-                                        className={styles.text}
-                                        aling="center"
-                                    />
+                                <>
+                                    <Link
+                                        key={el.href}
+                                        activeClass="active"
+                                        to={el.href}
+                                        spy={true}
+                                        smooth={true}
+                                        duration={700}
+                                        className={styles.link}
+                                    >
+                                        <Text
+                                            title={t(el.text)}
+                                            tag="h2"
+                                            weight="ligth"
+                                            aling="center"
+                                        />
+                                    </Link>
                                     <Hr max white />
-                                </Link>
+                                </>
                             ))}
                         </VStack>
                         <HStack>
@@ -79,7 +80,7 @@ export const SidebarHeaderBlock = memo((props: SidebarHeaderBlockProps) => {
                         </HStack>
                     </VStack>
                     <HStack className={styles.block} justify="end">
-                        <Button theme={ButtonTheme.CLEAR} onClick={onCallapsed}>
+                        <Button theme="clear" onClick={onCallapsed}>
                             <Icon Svg={Menu} className={styles.icon} />
                         </Button>
                     </HStack>
@@ -91,9 +92,9 @@ export const SidebarHeaderBlock = memo((props: SidebarHeaderBlockProps) => {
         <HStack className={styles.block} justify="between">
             <HStack>
                 <Icon Svg={Logo} className={styles.icon} />
-                <Text title="edotov" tag="h3" weight="ligth" white />
+                <Text title="edotov" tag="h3" weight="ligth" theme="white" />
             </HStack>
-            <Button theme={ButtonTheme.CLEAR} onClick={onCallapsed}>
+            <Button theme="clear" onClick={onCallapsed}>
                 <Icon Svg={Menu} className={styles.icon} />
             </Button>
         </HStack>

@@ -1,6 +1,5 @@
 .divText {
     height: 100%;
-    color: var(--text-color);
     position: relative;
     z-index: var(--z-index-text: 999);
 }
@@ -96,29 +95,9 @@ p {
 }
 
 .white {
-color: var(--text-color-white)
+color: var(--text-color-white);
 }
 
-.btn {
-    &:hover {
-        transition: 0.2s;
-        color: var(--hover-color);
-    }
-
-    @media screen and (max-width: 1280px) {
-        &:hover {
-        color: var(--text-color-white);
-        }
-    }
-}
-
-.hashtag {
-    transition: all 0.2s;
-    color: transparent;
-    user-select: none; 
-
-    &:hover {
-       color: red;
-       display: none;
-    }
+.outline {
+color: var(--text-color) 
 }

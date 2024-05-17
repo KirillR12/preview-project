@@ -3,28 +3,50 @@
 
     cursor: pointer;
 
+    color: var(--text-color-white);
+
     &:hover {
         transition: all 0.2s;
         color: var(--hover-color);
     }
 
-    @media screen {
+    @media screen and (max-width: 1280px){
         &:hover {
-            color: none;
+            color: var(--text-color-white);
         }
     }
 }
 
 .clear {
-    padding: 0 10px;
-    border: none;
+color: none;
+padding: 0 10px;
+border: none;
+background: none;
+outline: none;
+}
 
-    background: none;
-    outline: none;
+.clear_outline {
+padding: 0 10px;
+border: none;
+background: none;
+outline: none;
+color: var(--text-color);
+
+&:hover {
+transition: all 0.2s;
+color: var(--hover-color);
+}
+
+@media screen and (max-width: 1280px){
+    &:hover {
+        color: var(--text-color);
+    }
+}
 }
 
 .outline {
 background-color: rgb(154, 92, 255);
 padding: 10px 50px;
 border: none;
+color: var(--text-color);
 }

@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 import { Icon } from '@/shared/ui/Icon'
 import theme from '@/shared/assets/svg/theme.svg'
 import { PreviewType } from '@/shared/types/PreviewType'
-import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { Button } from '@/shared/ui/Button'
 import { useTheme } from '@/shared/hooks/useTheme'
 import Logo from '@/shared/assets/svg/logo.svg'
 import { LangSwitcher } from '@/features/langSwitcher'
@@ -49,19 +49,14 @@ export const HeaderBlock = memo((props: HeaderBlockProps) => {
                         spy={true}
                         smooth={true}
                         duration={700}
+                        className={styles.linkBtn}
                     >
-                        <Text
-                            title={t(el.text)}
-                            tag="h4"
-                            className={styles.text}
-                            weight="ligth"
-                            btn
-                        />
+                        <Text title={t(el.text)} tag="h4" weight="ligth" />
                     </Link>
                 ))}
                 <HStack gap="16" align="center">
                     <LangSwitcher />
-                    <Button theme={ButtonTheme.CLEAR} onClick={toggleTheme}>
+                    <Button theme="clear" onClick={toggleTheme}>
                         <Icon Svg={theme} />
                     </Button>
                 </HStack>

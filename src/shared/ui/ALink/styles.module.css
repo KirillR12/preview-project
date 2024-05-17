@@ -30,3 +30,22 @@
     }
 }
 }
+
+.clear_outline {
+    padding: 0 10px;
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--text-color);
+    
+    &:hover {
+    transition: all 0.2s;
+    color: var(--hover-color);
+    }
+
+    @media screen and (max-width: 1280px){
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+    }

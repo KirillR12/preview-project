@@ -1,8 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { memo } from 'react'
-import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { Button } from '@/shared/ui/Button'
 import { Text } from '@/shared/ui/Text'
-import styles from './styles.module.css'
 import { useMediaQuery } from 'react-responsive'
 
 export const LangSwitcher = memo(() => {
@@ -15,13 +14,11 @@ export const LangSwitcher = memo(() => {
     const isModuleSize = useMediaQuery({ query: '(min-width: 1020px)' })
 
     return (
-        <Button theme={ButtonTheme.CLEAR} onClick={toggle}>
+        <Button onClick={toggle}>
             <Text
-                title={t('eng')}
+                title={t('Eng')}
                 tag={isModuleSize ? 'h4' : 'h3'}
-                className={styles.text}
                 weight="ligth"
-                btn
             />
         </Button>
     )
